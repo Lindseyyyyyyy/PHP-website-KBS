@@ -167,4 +167,6 @@
     }
 }
 
-
+.scrollable-container {
+    overflow: auto;
+}
