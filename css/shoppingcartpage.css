@@ -1,0 +1,10 @@
+.navbar {
+    background-color: rgba(41, 0, 77); /* Adjust the alpha value for transparency */
+}
+
+.footer {
+    background-color: #230536;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
