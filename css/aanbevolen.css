@@ -1,0 +1,194 @@
+/*Sectie homepage aanbevolen producten*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gili sans', sans-serif;
+}
+
+.maincards {
+    margin: 3.3% 0 100px;
+    outline-color: #daa671;
+    text-align: center;
+}
+
+.cards {
+    width: 27%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2.7%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+
+}
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+    color: #d08c49;
+}
+
+.cards h1 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: bold;
+    color: #b4a7be;
+}
+
+.des {
+    padding: 3px;
+    font-size: 19px;
+    line-height: 2.0;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #c1b4c9;
+    font-family: Garamond, serif;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #4b0082;
+    border: 1px solid #c1b4c9;
+    padding: 5px;
+    cursor: pointer;
+    color: #c1b4c9;
+}
+button:hover {
+    background-color: #100033;
+    color: white;
+    transition: .5s;
+}
+
+
+/* Klantenreviews sectie*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root{
+   --primary-color: #ff226f;
+    --primary-color-dark: #fe6769;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.cover4 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+    color: #c1b4c9;
+}
+.cover4_left h1 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #c1b4c9;
+}
+
+.cover4_left p {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-size: 1.29rem;
+
+}
+
+.cover4_left button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+            to right,
+            #76428a,
+            #b4a7be
+    );
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cover4_right {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 75px;
+    border-radius: 100%;
+}
+
+.card__content {
+    display: flex;
+    gap: 1rem;
+}
+
+.card__content span i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.card__details p {
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.card__details h4 {
+    text-align: right;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (width < 1200px) {
+    .cover4 {
+        gap: 3rem;
+    }
+}
+
+@media (width < 900px) {
+    .cover4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cover4__right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 750px) {
+    .cover4__right {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

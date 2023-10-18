@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <body style="background-color: #4b0082;">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Nerdy Gadgets</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/cover.css">
+  <link rel="stylesheet" href="../css/aanbevolen.css">
   <style>
     /* Custom CSS for full page cover */
     .cover {
-      background-image: url('https://hyper-reality.io/wp-content/uploads/2019/08/home-header-ps.gif'); /* Replace with your own image URL */
+      background-image: url('https://hyper-reality.io/wp-content/uploads/2019/08/home-header-ps.gif');
+      filter: brightness(55%);
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -20,7 +22,7 @@
       justify-content: center;
     }
     .cover2 {
-      background-image: url('https://media.tenor.com/Ux8DkBfh_OEAAAAd/purple-cyberpunk.gif'); /* Replace with your own image URL */
+      background-image: url('https://media.tenor.com/Ux8DkBfh_OEAAAAd/purple-cyberpunk.gif');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -30,33 +32,46 @@
       flex-direction: column;
       justify-content: center;
     }
+
+
     /* Define a custom CSS class for the button */
     .btn-primary {
-      background-color: #d8d514;
+      background-color: #ffffff;
       color: #000000;
       border: 2px solid #000000;
       padding: 10px 20px;
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-      text-decoration: none; /* Remove the underline from the link */
+      text-decoration: none;
     }
     .cover h1 {
-      font-size: 3em;
+      font-size: 8em;
+      color: #ffffff;
       margin-bottom: 20px;
+      font-family: 'Montserrat';
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .cover p {
-      font-size: 1.5em;
+      font-size: 4em;
       margin-bottom: 30px;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .cover2 p {
+      font-family: 'Montserrat';
+      margin: 20px 0;
+      font-size: 1.7em;
+      margin-left: 0;
     }
 
     /* Custom CSS for transparent navbar */
     .navbar {
-      background-color: rgba(0, 0, 0, 0.1); /* Adjust the alpha value for transparency */
+      background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha value for transparency */
     }
   </style>
 </head>
 <body>
-
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -98,15 +113,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p>Nerdy Gadgets is dé bestemming voor technologie- en popcultuurfans in Nederland. Met onze populaire vestiging in Amsterdam, evolueren we nu naar de digitale wereld om deze bekende en geliefde winkelervaring te bieden in onze nieuwe webshop. We staan voor innovatie en klanttevredenheid. Bij Nerdy Gadgets is technologie niet alleen een product, maar een passie die we graag delen met onze klanten, waarbij we de nieuwste trends en popcultuur samenbrengen. Welkom bij Nerdy Gadgets, een paradijs voor nerds. </p>
+          <p>Nerdy Gadgets is dé ultieme bestemming voor technologie- en popcultuurliefhebbers in Nederland. <br>Onze fysieke winkel in Amsterdam is al geliefd, maar we evolueren nu naar een digitale wereld met onze nieuwe webshop. Bij Nerdy Gadgets is technologie meer dan alleen een product; het is onze passie. We delen deze passie graag met onze klanten en brengen de nieuwste trends en popcultuur samen in een paradijs voor nerds. </p>
         </div>
-        <p>Bij Nerdy Gadgets is onze missie om technologie toegankelijk te maken en te vieren. We streven ernaar om onze klanten een unieke en meeslepende winkelervaring te bieden, zowel online als offline. We zijn vastbesloten om hoogwaardige producten aan te bieden, en constant te innoveren. We staan voor kwaliteit voor techliefhebbers in nederland en daar buiten. </p>>
+        <p>Onze missie is om technologie toegankelijk te maken en te vieren, zowel online als offline. We blijven innoveren en bieden hoogwaardige producten van topkwaliteit voor techliefhebbers, niet alleen in Nederland, maar overal. </p>
       </div>
-      <p>Onze visie bij Nerdy Gadgets is om de meest geliefde bestemming te worden voor iedereen die gepassioneerd is door technologie. We streven ernaar om voortdurend te innoveren en onze klanten te kunnen blijven verrassen en inspireren. We willen een wereld creëren waar technologie beschikbaar is voor iedereen. Onze toewijding aan kwaliteit, creativiteit en klanttevredenheid zal altijd de kern van ons bedrijf vormen terwijl we groeien en evolueren. </p>
+      <p>Onze visie bij Nerdy Gadgets is om de meest geliefde bestemming te worden voor iedereen die gepassioneerd is door technologie. We blijven innoveren, onze klanten verrassen en inspireren, en streven ernaar een wereld te creëren waar technologie voor iedereen beschikbaar is. Kwaliteit, creativiteit en klanttevredenheid vormen de kern van ons bedrijf terwijl we blijven groeien en evolueren.</p>
     </div>
   </section>
 
 
+  <section class="cover3">
     <div class="maincards">
       <div class="cards">
         <div class="image">
@@ -120,40 +136,92 @@
           <p>FutureGaze, de ultieme VR-bril voor avonturiers <br> en gamers, biedt hyperrealistische virtuele werelden en meeslepende ervaringen.Ontsnap aan de alledaagse <br>sleur en beleef spannende avonturen. Stap in de <br>toekomst en laat je dromen uitkomen!</p>
           <button>Read More</button>
         </div>
-
       </div>
       <div class="cards">
         <div class="image">
           <img src="Goedeimages/pc.jpg" alt="pc">
         </div>
         <div class="title">
-          <h1>GameWave</h1>
-        </div>
-        <div class="des">
-          <p>"Ontdek 'Inferno X1' voor de ultieme <br> gamingervaring. Met krachtige hardware, verbluffende <br>graphics en meeslepend geluid. Bereid je voor op <br>meeslepende avonturen en competitieve overwinningen. Upgrade je gaming met 'Inferno X1'!"</p>
-          <button>Read More</button>
-        </div>
+        <h1>GameWave</h1>
       </div>
-
-      <div class="cards">
-        <div class="image">
-          <img src="Goedeimages/arcade.jpg" alt="arcade">
-        </div>
-        <div class="title">
-          <h1>Inferno X1</h1>
-        </div>
-        <div class="des">
-          <p>GameWave tilt gaming naar een hoger niveau met <br> arcade machines voor gamers van alle niveaus. <br>Beleef klassieke en moderne games met verbluffende <br>graphics en meeslepend geluid. Ontdek een wereld van onbegrensd gaming-plezier!</p>
-          <button>Read More</button>
-        </div>
+      <div class="des">
+        <p>"Ontdek 'Inferno X1' voor de ultieme <br> gamingervaring. Met krachtige hardware, verbluffende <br>graphics en meeslepend geluid. Bereid je voor op <br>meeslepende avonturen en competitieve overwinningen. Upgrade je gaming met 'Inferno X1'!"</p>
+        <button>Read More</button>
       </div>
     </div>
 
+    <div class="cards">
+      <div class="image">
+        <img src="Goedeimages/arcade.jpg" alt="arcade">
+      </div>
+      <div class="title">
+        <h1>Inferno X1</h1>
+      </div>
+      <div class="des">
+        <p>GameWave tilt gaming naar een hoger niveau met <br> arcade machines voor gamers van alle niveaus. <br>Beleef klassieke en moderne games met verbluffende <br>graphics en meeslepend geluid. Ontdek een wereld van onbegrensd gaming-plezier!</p>
+        <button>Read More</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+<section class="cover4">
+  <div class="cover4_left">
+    <h1>Lees waarom onze klanten zo enthousiast zijn over Nerdy Gadgets</h1>
+    <p>
+      Onze klanten gaan voor Nerdy Gadgets vanwege onze geweldige producten, kwaliteit, deskundig advies, scherpe prijzen en de toffe ervaring die we bieden.
+    </p>
+    <p>
+      Sluit je vandaag aan bij onze tech community en ontdek waarom iedereen bij Nerdy Gadgets shopt voor hun gadgets.
+    </p>
+    <button>Read our reviews</button>
+  </div>
+
+  <div class="cover4_right">
+    <div class="card">
+      <img src="Goedeimages/usericon.jpg" alt="user" />
+      <div class="card__content">
+        <span><i class="ri-double-quotes-l"></i></span>
+        <div class="card__details">
+          <p>
+            Goede producten!
+          </p>
+          <h4>- Stephen</h4>
+        </div>
+      </div>
+    </div>
+        <div class="card">
+          <img src="Goedeimages/usericon.jpg" alt="user" />
+          <div class="card__content">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <div class="card__details">
+              <p>
+                Veel keuze.
+              </p>
+              <h4>- Justin</h4>
+            </div>
+          </div>
+      </div>
+    <div class="card">
+      <img src="Goedeimages/usericon.jpg" alt="user" />
+      <div class="card__content">
+        <span><i class="ri-double-quotes-l"></i></span>
+        <div class="card__details">
+          <p>
+            Snelle levering.
+          </p>
+          <h4>- Andrew</h4>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
 
   <!-- Bootstrap Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+</body>
 </body>
 </html>
