@@ -3,11 +3,12 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color: #ffffff;
+    color: #f3cb02;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-shadow: -1px -1px 0 #f3cb02, 1px -1px 0 #f3cb02, -1px 1px 0 #000, 1px 1px 0 #f3cb02;
 }
 .cover2 {
     background-image: url('https://media.tenor.com/Ux8DkBfh_OEAAAAd/purple-cyberpunk.gif'); /* Replace with your own image URL */
@@ -25,7 +26,7 @@
     color: #000000;
     border: 2px solid #000000;
     padding: 10px 20px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(255, 250, 0), 0 17px 50px 0 rgba(0,0,0,0.19);
     text-decoration: none;
 }
 .cover h1 {
