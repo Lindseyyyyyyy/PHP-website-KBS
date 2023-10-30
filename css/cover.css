@@ -96,76 +96,21 @@ body {
 .cover {
     padding: 0 1.5rem;
 }
+
 .cover .btn-lg {
     padding: .75rem 1.25rem;
     font-weight: 700;
 }
 
-/*informatie_aanbevolen_producten*/
-.maincards {
-    margin: 3.3%;
-    margin-top: 200px;
-    outline-color: #daa671;
+/*Sectie homepage 1*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gili sans', sans-serif;
 }
 
-.cards {
-    width: 27%;
-    display: inline-block;
-    box-shadow: 2px 2px 20px black;
-    border-radius: 5px;
-    margin: 2.7%;
 
-}
-
-.image img {
-    width: 100%;
-    height: auto;
-
-}
-
-.title{
-    text-align: center;
-    padding: 20px;
-    color: #d08c49;
-    font-family: 'Times New Roman', serif;
-}
-
-h1 {
-    font-family: 'Times New Roman', serif;
-    font-size: 20px;
-    color: #daa671;
-}
-
-.des {
-    padding: 3px;
-    font-size: 18px;
-    line-height: 2.0;
-    text-align: center;
-    padding-top: 10px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: #daa671;
-    font-family: Garamond, serif;
-}
-
-button {
-    margin-top: 40px;
-    margin-bottom: 10px;
-    background-color: #070A14;
-    border: 1px solid #daa671;
-    padding: 5px;
-    cursor: pointer;
-    color: #daa671;
-}
-button:hover {
-    background-color: black;
-    color: white;
-    transition: .5s;
-}
-
-/*
- * Footer
- */
 .mastfoot {
     color: rgba(255, 255, 255, .5);
 }
