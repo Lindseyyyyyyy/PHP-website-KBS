@@ -41,3 +41,50 @@
             <p class="lead">Bekijk de gadgets die u heeft geselecteerd.</p>
         </div>
     </div>
+    <script>
+        // Functie om product aan winkelwagen toe te voegen
+        function addToCart(productName, price) {
+            // Controleer of er al een winkelwagen is opgeslagen in de sessie
+            var cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+            // Voeg het product toe aan de winkelwagen
+            var product = { name: productName, price: price };
+            cart.push(product);
+
+            // Sla de winkelwagen op in de sessie
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+
+            // Laat een melding zien (dit kan worden vervangen door een meer verfijnde gebruikersinterface)
+            alert(productName + " is toegevoegd aan de winkelwagen!");
+
+            document.body.style.backgroundColor = 'lightgreen';
+        }
+    </script>
+    <body>
+
+
+    <div>
+        <h3>Lenovo Legion T7 34IMZ5 - 90Q900ALMH: Krachtig Gamingbeest</h3>
+        <p>Prijs: €3300.-</p>
+        <button onclick="addToCart('Product 1', 10.00)">Voeg toe aan winkelwagen</button>
+    </div>
+
+    <div>
+        <h3>LG 40WP95CP-W - 39.7'' Gebogen UltraWide 5K2K Nano IPS Scherm: Een Venster naar de Toekomst van Beeldkwaliteit</h3>
+        <p>Prijs: €1300.-</p>
+        <button onclick="addToCart('Product 2', 15.00)">Voeg toe aan winkelwagen</button>
+    </div>
+
+    <h2>Winkelwagen</h2>
+    <div>
+        <!-- Hier de inhoud van winkelwagen weergeven -->
+        <button onclick="checkout()">Afrekenen</button>
+    </div>
+
+    <script>
+        // Functie om naar de afrekenpagina te gaan
+        function checkout() {
+            window.location.href = "checkout.html";
+        }
+    </script>
+    </body>

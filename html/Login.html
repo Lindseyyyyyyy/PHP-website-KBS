@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/Login.css">
+</head>
+<body>
+
+<form action="action_page.php" method="post">
+    <div class="imgcontainer" style="color: whitesmoke;">
+       <h1> Welcome back! </h1>
+        <h2> Don't have an account? <a href="home.html" style="color: whitesmoke;">Sign in</a></h2>
+    </div>
+
+    <div class="container">
+        <label ><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label ><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" >Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="rgba(204, 0, 198, 0.5)">
+        <a href="home.html" class="cancelbtn">Cancel</a>
+        <span class="psw" style="color: whitesmoke;">Forgot <a href="contact.html" style="color: whitesmoke;">password?</a></span>
+    </div>
+
+</form>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 Nerdy Gadgets</p>
+    </div>
+</footer>
+</body>
+</html>
