@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Nerdy Gadgets</title>
   <meta charset="UTF-8">
 <body style="background-color: #4b0082;">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Nerdy Gadgets</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/aanbevolen.css">
 <style>
@@ -69,6 +69,67 @@
   .navbar {
     background-color: rgba(0, 0, 0, 0.1); /* Adjust the alpha value for transparency */
   }
+
+  /*banner*/
+  body {
+    background-color: #f8fafc;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+
 </style>
 </head>
 <body>
@@ -180,7 +241,7 @@
 
   <div class="cover4_right">
     <div class="card">
-      <img src="Goedeimages/usericon.jpg" alt="user" />
+      <img src="Goedeimages/usericon.jpg" alt="user"/>
       <div class="card__content">
         <span><i class="ri-double-quotes-l"></i></span>
         <div class="card__details">
@@ -217,6 +278,23 @@
     </div>
   </div>
 </section>
+
+<section class="container">
+  <div class="slider-wrapper">
+    <div class="slider">
+      <img id="slide-1" src="https://img.freepik.com/free-photo/electronic-device-balancing-concept_23-2150422322.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699833600&semt=ais" alt="product 1" />
+      <img id="slide-2" src="https://img.freepik.com/premium-photo/glowing-headphone-neon-dark-background-ai-generated_99418-1352.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699574400&semt=ais" alt="product 2" />
+      <img id="slide-3" src="https://img1.cgtrader.com/items/2862357/bf2fa5c258/large/dualsense-controller-matte-black-ps5-3d-model-bf2fa5c258.jpg" alt="product 3" />
+    </div>
+    <div class="slider-nav">
+      <a href="#slide-1"></a>
+      <a href="#slide-2"></a>
+      <a href="#slide-3"></a>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
