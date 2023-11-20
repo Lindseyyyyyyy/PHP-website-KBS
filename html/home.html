@@ -1,19 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Nerdy Gadgets</title>
   <meta charset="UTF-8">
 <body style="background-color: #4b0082;">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Nerdy Gadgets</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/aanbevolen.css">
-<link rel="stylesheet" href="../css/homepage.css">
+<style>
+  /* Custom CSS for full page cover */
+  .cover {
+    background-image: url('https://hyper-reality.io/wp-content/uploads/2019/08/home-header-ps.gif');
+    filter: brightness(65%);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cover2 {
+    background-image: url('https://media.tenor.com/Ux8DkBfh_OEAAAAd/purple-cyberpunk.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  /* Define a custom CSS class for the button */
+  .btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: none; /* Remove the underline from the link */
+  }
+  .cover h1 {
+    font-size: 8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .cover p {
+    font-size: 4em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .cover2 p {
+    font-family: 'Montserrat';
+    margin: 20px 0;
+    font-size: 1.3em;
+    margin-left: 0;
+  }
+
+  /* Custom CSS for transparent navbar */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the alpha value for transparency */
+  }
+
+  /*banner*/
+  body {
+    background-color: #f8fafc;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+
+</style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
+  <a class="navbar-brand" href="#">Nerdy Gadgets</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,19 +159,31 @@
 </nav>
 
 <section class="cover">
-  <div class="container1">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h1>Nerdy Gadgets</h1>
         <p>Unlock your inner geek.</p>
-        <a href="ourfavorite.html" class="btn-primary">Our favorite</a>
+        <a href="#" class="btn btn-primary">Our favorite</a>
       </div>
     </div>
   </div>
 </section>
 
+<section class="cover2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>(((((Verandering test>>>>>>>Nerdy Gadgets is dé ultieme bestemming voor technologie- en popcultuurliefhebbers in Nederland. <br>Onze fysieke winkel in Amsterdam is al geliefd, maar we evolueren nu naar een digitale wereld met onze nieuwe webshop. Bij Nerdy Gadgets is technologie meer dan alleen een product; het is onze passie. We delen deze passie graag met onze klanten en brengen de nieuwste trends en popcultuur samen in een paradijs voor nerds. </p>
+      </div>
+      <p>Onze missie is om technologie toegankelijk te maken en te vieren, zowel online als offline. We blijven innoveren en bieden hoogwaardige producten van topkwaliteit voor techliefhebbers, niet alleen in Nederland, maar overal. </p>
+    </div>
+    <p>Onze visie bij Nerdy Gadgets is om de meest geliefde bestemming te worden voor iedereen die gepassioneerd is door technologie. We blijven innoveren, onze klanten verrassen en inspireren, en streven ernaar een wereld te creëren waar technologie voor iedereen beschikbaar is. Kwaliteit, creativiteit en klanttevredenheid vormen de kern van ons bedrijf terwijl we blijven groeien en evolueren.</p>
+  </div>
+</section>
 
-<section class="cover3">
+
+<section class="cover3 container">
   <div class="maincards">
     <div class="cards">
       <div class="image">
@@ -59,8 +194,8 @@
         <h1>FutureGaze</h1>
       </div>
       <div class="des">
-        <p>FutureGaze, de ultieme VR-bril voor avonturiers en gamers, biedt hyperrealistische virtuele werelden en meeslepende ervaringen. Ontsnap aan de alledaagse sleur en beleef spannende avonturen.<br> Stap in de toekomst en laat je dromen uitkomen!</p>
-        <a href="FuturegazeHome.html" class="btn btn-primary">Read More</a>
+        <p>FutureGaze, de ultieme VR-bril voor avonturiers <br> en gamers, biedt hyperrealistische virtuele werelden en meeslepende ervaringen.Ontsnap aan de alledaagse <br>sleur en beleef spannende avonturen. Stap in de <br>toekomst en laat je dromen uitkomen!</p>
+        <button>Read More</button>
       </div>
     </div>
     <div class="cards">
@@ -71,8 +206,8 @@
         <h1>GameWave</h1>
       </div>
       <div class="des">
-        <p>"Ontdek 'Inferno X1' voor de ultieme gamingervaring. Met krachtige hardware, verbluffende graphics en meeslepend geluid. <br>Bereid je voor op meeslepende avonturen en competitieve overwinningen. <br>Upgrade je gaming met 'Inferno X1'!"</p>
-        <a href="GameWaveHome.html" class="btn btn-primary">Read More</a>
+        <p>"Ontdek 'Inferno X1' voor de ultieme <br> gamingervaring. Met krachtige hardware, verbluffende <br>graphics en meeslepend geluid. Bereid je voor op <br>meeslepende avonturen en competitieve overwinningen. Upgrade je gaming met 'Inferno X1'!"</p>
+        <button>Read More</button>
       </div>
     </div>
 
@@ -84,12 +219,13 @@
         <h1>Inferno X1</h1>
       </div>
       <div class="des">
-        <p>GameWave tilt gaming naar een hoger niveau met arcade machines voor gamers van alle niveaus. Beleef klassieke en moderne games met verbluffende <br>graphics en meeslepend geluid. Ontdek een wereld van onbegrensd gaming-plezier!</p>
-        <a href="InfernoHome.html" class="btn btn-primary">Read More</a>
+        <p>GameWave tilt gaming naar een hoger niveau met <br> arcade machines voor gamers van alle niveaus. <br>Beleef klassieke en moderne games met verbluffende <br>graphics en meeslepend geluid. Ontdek een wereld van onbegrensd gaming-plezier!</p>
+        <button>Read More</button>
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="cover4">
   <div class="cover4_left">
@@ -105,7 +241,7 @@
 
   <div class="cover4_right">
     <div class="card">
-      <img src="Goedeimages/usericon.jpg" alt="user" />
+      <img src="Goedeimages/usericon.jpg" alt="user"/>
       <div class="card__content">
         <span><i class="ri-double-quotes-l"></i></span>
         <div class="card__details">
@@ -143,50 +279,22 @@
   </div>
 </section>
 
-
-
-<form action="action_page.php">
-  <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required> <br>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required> <br>
-
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required> <br>
-    <hr>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
-    <p>Already have an account? <a href="Login.html">Sign in</a>.</p>
-  </div>
-</form>
-
-<section class="cover2">
-  <div class="container2">
-    <div class="row">
-      <div class="col-md-12">
-        <p>Nerdy Gadgets is dé ultieme bestemming voor technologie- en popcultuurliefhebbers in Nederland. <br>Onze fysieke winkel in Amsterdam is al geliefd, maar we evolueren nu naar een digitale wereld met onze nieuwe webshop. Bij Nerdy Gadgets is technologie meer dan alleen een product; het is onze passie. We delen deze passie graag met onze klanten en brengen de nieuwste trends en popcultuur samen in een paradijs voor nerds. </p>
-      </div>
-      <p>Onze missie is om technologie toegankelijk te maken en te vieren, zowel online als offline. We blijven innoveren en bieden hoogwaardige producten van topkwaliteit voor techliefhebbers, niet alleen in Nederland, maar overal. </p>
+<section class="container">
+  <div class="slider-wrapper">
+    <div class="slider">
+      <img id="slide-1" src="https://img.freepik.com/free-photo/electronic-device-balancing-concept_23-2150422322.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699833600&semt=ais" alt="product 1" />
+      <img id="slide-2" src="https://img.freepik.com/premium-photo/glowing-headphone-neon-dark-background-ai-generated_99418-1352.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699574400&semt=ais" alt="product 2" />
+      <img id="slide-3" src="https://img1.cgtrader.com/items/2862357/bf2fa5c258/large/dualsense-controller-matte-black-ps5-3d-model-bf2fa5c258.jpg" alt="product 3" />
     </div>
-    <p>Onze visie bij Nerdy Gadgets is om de meest geliefde bestemming te worden voor iedereen die gepassioneerd is door technologie. We blijven innoveren, onze klanten verrassen en inspireren, en streven ernaar een wereld te creëren waar technologie voor iedereen beschikbaar is. Kwaliteit, creativiteit en klanttevredenheid vormen de kern van ons bedrijf terwijl we blijven groeien en evolueren.</p>
+    <div class="slider-nav">
+      <a href="#slide-1"></a>
+      <a href="#slide-2"></a>
+      <a href="#slide-3"></a>
+    </div>
   </div>
 </section>
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2023 Nerdy Gadgets</p>
-  </div>
-</footer>
+
+
 
 <!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
