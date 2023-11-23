@@ -23,3 +23,15 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.cover2 {
+    background-image: url('https://media.tenor.com/Ux8DkBfh_OEAAAAd/purple-cyberpunk.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

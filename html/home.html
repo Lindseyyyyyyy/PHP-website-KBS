@@ -7,200 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/aanbevolen.css">
-<style>
-  /* Custom CSS for full page cover */
-  .cover {
-    background-image: url('https://hyper-reality.io/wp-content/uploads/2019/08/home-header-ps.gif');
-    filter: brightness(65%);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .cover2 {
-    background-image: url('https://media.tenor.com/Ux8DkBfh_OEAAAAd/purple-cyberpunk.gif');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-
-  /* Define a custom CSS class for the button */
-  .btn-primary {
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #000000;
-    padding: 10px 20px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    text-decoration: none; /* Remove the underline from the link */
-  }
-  .cover h1 {
-    font-size: 8em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-family: 'Montserrat';
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
-  .cover p {
-    font-size: 4em;
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-family: 'Montserrat';
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  .cover2 p {
-    font-family: 'Montserrat';
-    margin: 20px 0;
-    font-size: 1.3em;
-    margin-left: 0;
-  }
-
-  /* Custom CSS for transparent navbar */
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.1); /* Adjust the alpha value for transparency */
-  }
-
-  /*banner*/
-  body {
-    background-color: #f8fafc;
-  }
-
-  .container {
-    padding: 2rem;
-  }
-
-  .slider-wrapper {
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
-
-  .slider {
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .slider::-webkit-scrollbar {
-    display: none;
-  }
-
-  .slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-  }
-
-  .slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  .slider-nav a {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
-  }
-
-  .slider-nav a:hover {
-    opacity: 1;
-  }
-
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  /* Add padding to containers */
-  .container1 {
-    padding: 16px;
-    background-color: white;
-  }
-
-  /* Full-width input fields */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-
-  /* Overwrite default styles of hr */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-  /* Set a style for the submit button */
-  .registerbtn {
-    background-color: #4b0082;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-
-  .registerbtn:hover {
-    opacity: 1;
-  }
-
-  /* Add a blue text color to links */
-  a {
-    color: dodgerblue;
-  }
-
-  /* Set a grey background color and center the text of the "sign in" section */
-  .signin {
-    background-color: #4b0082;
-    text-align: center;
-    color: white;
-  }
-
-</style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <a class="navbar-brand" href="#">Nerdy Gadgets</a>
+  <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -250,6 +62,7 @@
         <button> <a href="FuturegazeHome.html">Read More </button>
       </div>
     </div>
+
     <div class="cards">
       <div class="image">
         <img src="Goedeimages/pc.jpg" alt="pc">
@@ -259,8 +72,8 @@
       </div>
       <div class="des">
         <p>"Ontdek 'Inferno X1' voor de ultieme <br> gamingervaring. Met krachtige hardware, verbluffende <br>graphics en meeslepend geluid. Bereid je voor op <br>meeslepende avonturen en competitieve overwinningen. Upgrade je gaming met 'Inferno X1'!"</p>
-        <a href="InfernoHome.html">
-        <button> Read More </button>
+
+        <button> <a href="InfernoHome.html">Read More </button>
       </div>
     </div>
 
@@ -372,17 +185,6 @@
   </div>
 </form>
 
-<section class="cover2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <p>Nerdy Gadgets is dé ultieme bestemming voor technologie- en popcultuurliefhebbers in Nederland. <br>Onze fysieke winkel in Amsterdam is al geliefd, maar we evolueren nu naar een digitale wereld met onze nieuwe webshop. Bij Nerdy Gadgets is technologie meer dan alleen een product; het is onze passie. We delen deze passie graag met onze klanten en brengen de nieuwste trends en popcultuur samen in een paradijs voor nerds. </p>
-      </div>
-      <p>Onze missie is om technologie toegankelijk te maken en te vieren, zowel online als offline. We blijven innoveren en bieden hoogwaardige producten van topkwaliteit voor techliefhebbers, niet alleen in Nederland, maar overal. </p>
-    </div>
-    <p>Onze visie bij Nerdy Gadgets is om de meest geliefde bestemming te worden voor iedereen die gepassioneerd is door technologie. We blijven innoveren, onze klanten verrassen en inspireren, en streven ernaar een wereld te creëren waar technologie voor iedereen beschikbaar is. Kwaliteit, creativiteit en klanttevredenheid vormen de kern van ons bedrijf terwijl we blijven groeien en evolueren.</p>
-  </div>
-</section>
 
 <!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

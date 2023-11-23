@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorgaan als Gast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Doorgaan als Gast</h2>
+
+<form onsubmit="doorgaanAlsGast(); return false;">
+    <label for="naam">Naam:</label>
+    <input type="text" id="naam" name="naam" required>
+
+    <br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <input type="submit" value="Doorgaan als Gast">
+</form>
+
+<script>
+    function doorgaanAlsGast() {
+        // Hier kun je de ingevoerde gegevens verwerken (bijv. opslaan in een variabele)
+        var naam = document.getElementById("naam").value;
+        var email = document.getElementById("email").value;
+
+        // Voor nu geven we de ingevoerde gegevens gewoon weer op het scherm
+        alert("Welkom, " + (naam || "Gast") + "!");
+    }
+</script>
+
+</body>
+</html>
