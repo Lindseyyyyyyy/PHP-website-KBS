@@ -58,7 +58,7 @@
                     <option value="niet"> onze selectie </option>
                 </select>
                 <br>
-                <input type="submit" name="submit" value="Keuze bevestigenn">
+                <input type="submit" name="submit" value="Keuze bevestigen">
                 <br>
                 <input type="reset" value="filters resetten">
             </form>
