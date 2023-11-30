@@ -1,7 +1,10 @@
 .navbar {
-    background-color: rgba(41, 0, 77); /* Adjust the alpha value for transparency */
+    background-color: rgba(41, 0, 77);
 }
-
+body {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9e4606da-0f81-4537-97b6-1bc18bd9b3a1/ddzvn8s-a177407d-ed35-41bd-b5ea-8bed918ba800.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllNDYwNmRhLTBmODEtNDUzNy05N2I2LTFiYzE4YmQ5YjNhMVwvZGR6dm44cy1hMTc3NDA3ZC1lZDM1LTQxYmQtYjVlYS04YmVkOTE4YmE4MDAuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.L4l_0fWZTAOe0iiS9Uqxm-xxNUZjjJEpDfOZ1K-OOLw');
+    background-size: cover;
+}
 .footer {
     background-color: #230536;
     color: #fff;
