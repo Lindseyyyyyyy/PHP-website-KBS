@@ -1,4 +1,8 @@
+<?php
+$query = "SELECT * FROM product";
+$result = $db->query($query);
 
+?>
 <html>
 <html lang="en">
 <head>
@@ -44,18 +48,22 @@
             <!-- productfilters -->
             <form>
               categorie: <input type="checkbox" name="productsoort" value= "laptops" > laptops
-              <input type="checkbox" name="productsoort" value="phones"> phones
+              <input type="checkbox" name="productsoort" value="phones" <?php if(isset($_GET["phones"])) { print("checked"); } ?> > phones
                 <input type="checkbox" name="productsoort" value="opslag"> opslag
                 <input type="checkbox" name="productsoort" value="routers"> routers
                 <input type="checkbox" name="productsoort" value="componenten"> componenten
                 <input type="checkbox" name="productsoort" value="desktops"> desktops
+                <br>
+                prijs: <input type="checkbox" name="prijsklasse" value="laag" > tot 100
+                <input type="checkbox" name="prijsklasse" value="midden" > 100 tot 250
+                <input type="checkbox" name="prijsklasse" value="hoog" > boven de 250
                 <br>
                 producten sorteren op:
                     <select name="sorteren op" id="sorteren">
                     <option value="nieuw">nieuwste eerst</option>
                     <option value="laagsteprijs">prijs van laag naar hoog</option>
                     <option value="hoogsteprijs">prijs van hoog naar laag</option>
-                    <option value="niet"> onze selectie </option>
+                    <option value="niet"> populair </option>
                 </select>
                 <br>
                 <input type="submit" name="submit" value="Keuze bevestigen">
