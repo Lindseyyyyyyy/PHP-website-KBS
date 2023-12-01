@@ -1,4 +1,3 @@
-
 <html>
 <html lang="en">
 <head>
@@ -7,11 +6,9 @@
   <title>The Nerdy Gadgets</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/products.css">
-
 </head>
-<body>
 
-  <!-- Navbar -->
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
