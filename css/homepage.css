@@ -40,6 +40,10 @@
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
 }
+.navbar-logo {
+    height: 40px; /* Pas de hoogte aan zoals nodig */
+    margin-right: 10px; /* Voeg wat ruimte toe tussen de afbeelding en de tekst */
+}
 
 .cover {
     background-image: url('https://hyper-reality.io/wp-content/uploads/2019/08/home-header-ps.gif');

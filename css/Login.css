@@ -78,9 +78,37 @@ span.psw {
         width: 100%;
     }
 }
-.footer {
-    background-color: #ff745e;
-    color: #fff;
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container1 {
     text-align: center;
-    padding: 5px 0;
+    padding: 20px;
+    background-color: #ff745e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.guest-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #51e2eb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.guest-button:hover {
+    background-color: #0056b3;
 }
