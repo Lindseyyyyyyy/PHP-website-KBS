@@ -13,9 +13,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$query = "SELECT * FROM product";
+$query = "SELECT * FROM product ";
 $result = $conn->query($query);
-
+$productnaam  = "SELECT name FROM product WHERE id = 1"
 ?>
 <html>
 <html lang="en">
@@ -96,13 +96,38 @@ $result = $conn->query($query);
           </div>
 
   <!-- Product Grid -->
-    <section class="container my-5">
+    <?php
+    if ($result->num_rows > 0) {
+        // Output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo
+            '<section class="container my-5">
         <div class="row mb-4">
             <div class="col-lg-4">
               <div class="card">
+
+                <img src="productimages/'.$row["image"].'.jpg" class="card-img-top" alt="pc">
+                <div class="card-body">
+                  <h5 class="card-title">'.$row["id"].'</h5>
+                  <p class="card-text">'. $row["name"].'} </p>
+                  <span class="product-price"> <strong>'. $row["price"].'-</strong> </span>
+                  <a href="shoppingcart.html" class="btn btn-primary float-right">Buy Now</a>
+                </div>
+              </div>
+            </div>';
+
+        }
+    } else {
+        echo "<br>No results found<br>";} ?>
+
+        <section class="container my-5">
+        <div class="row mb-4">
+            <div class="col-lg-4">
+              <div class="card">
+
                 <img src="https://rseatstore.nl/wp-content/uploads/2023/02/rseat-rs1-red-black-01-1200x1200-2.jpg" class="card-img-top" alt="Product Image">
                 <div class="card-body">
-                  <h5 class="card-title">RSeat RS1 - Zwart Frame / Rode Stoel: Premium Simulatie Race-ervaring</h5>
+                  <h5 class="card-title"><?php ?>RSeat RS1 - Zwart Frame / Rode Stoel: Premium Simulatie Race-ervaring</h5>
                   <p class="card-text">De RSeat RS1 met een zwart frame en een rode stoel biedt de ultieme race- en
                     vliegsimulatie-ervaring voor serieuze enthousiastelingen en professionals. </p>
                   <span class="product-price"> <strong>€1500,-</strong> </span>
@@ -110,6 +135,10 @@ $result = $conn->query($query);
                 </div>
               </div>
             </div>
+
+
+
+            <!-- producten
             <div class="col-lg-4">
               <div class="card">
                 <img src="https://hwimages.beslist.net/beslist-images/3NKhCQtZk8eRanazLjQXEFXAgxYg/394/F600/84ea216e31bd107ab93646aead906b8c/Computerspeakers/Edifier-R1100-pc-luidspreker.jpg" class="card-img-top" alt="Product Image">
@@ -255,7 +284,7 @@ $result = $conn->query($query);
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
     </div>
     </section>
 
