@@ -1,5 +1,6 @@
 <?php
 
+
 $servername = "localhost"; // Replace with your server name
 $username = "root"; // Replace with your username
 $password = ""; // Replace with your password
@@ -58,10 +59,14 @@ $result = $conn->query($query);
           <div style="background-color: #230536; color: #fff; padding: 20px; text-align: center;">
           <h1 class="display-4">The Gadgets</h1>
           <p class="lead">Explore our amazing gadgets.</p>
-            <!-- productfilters -->
+
+                      <!-- productfilters -->
+            <div class="container text-left">
+                <div style="background-color: #230536; color: #fff; padding: 20px; text-align: left;">
+                    <p class="lead">productfilters.</p>
             <form>
               categorie: <input type="checkbox" name="productsoort" value= "laptops" > laptops
-              <input type="checkbox" name="productsoort" value="phones" <?php if(isset($_GET["phones"])) { print("checked"); } ?> > phones
+              <input type="checkbox" name="productsoort" value="phones" <?php /* miss gebruik ik dit later if(isset($_GET["phones"])) { print("checked"); }*/ ?> > phones
                 <input type="checkbox" name="productsoort" value="opslag"> opslag
                 <input type="checkbox" name="productsoort" value="routers"> routers
                 <input type="checkbox" name="productsoort" value="componenten"> componenten
@@ -71,20 +76,24 @@ $result = $conn->query($query);
                 <input type="checkbox" name="prijsklasse" value="midden" > 100 tot 250
                 <input type="checkbox" name="prijsklasse" value="hoog" > boven de 250
                 <br>
-                producten sorteren op:
-                    <select name="sorteren op" id="sorteren">
+
+                producten sorteren op: <select name="sorteren op" id="sorteren" >
                     <option value="nieuw">nieuwste eerst</option>
                     <option value="laagsteprijs">prijs van laag naar hoog</option>
                     <option value="hoogsteprijs">prijs van hoog naar laag</option>
                     <option value="niet"> populair </option>
                 </select>
-                <br>
-                <input type="submit" name="submit" value="Keuze bevestigen">
-                <br>
-                <input type="reset" value="filters resetten">
-            </form>
         </div>
       </div>
+          </div>
+  <div class="container text-right">
+      <div style="background-color: #230536; color: #fff; padding: 20px; text-align: right;">
+          <input type="submit" name="submit" value="Keuze bevestigen">
+          <br>
+          <input type="reset" value="filters resetten">
+      </div>
+  </div>
+          </div>
 
   <!-- Product Grid -->
     <section class="container my-5">
