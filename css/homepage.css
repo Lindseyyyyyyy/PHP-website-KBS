@@ -162,3 +162,32 @@ a {
     background-color: rgba(204, 0, 198, 0.5);
     text-align: center;
 }
+
+<style>
+ .balloon {
+     width: 20px;
+     height: 30px;
+     background-color: #3498db;
+     border-radius: 50%;
+     position: fixed;
+     animation: floatUp 3s ease-in-out infinite, colorChange 5s infinite;
+ }
+
+@keyframes floatUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #e74c3c;
+    }
+}
+</style>
