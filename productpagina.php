@@ -89,7 +89,7 @@ $result = $conn->query($query);
           </div>
   <div class="container text-right">
       <div style="background-color: #230536; color: #fff; padding: 20px; text-align: right;">
-          <input type="submit" name="submit" value="Keuze bevestigen">
+          <input type="submit" name="submit" value="Keuze bevestigenn">
           <br>
           <input type="reset" value="filters resetten">
       </div>
