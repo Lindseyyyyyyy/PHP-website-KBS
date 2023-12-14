@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = "localhost"; // Replace with your server name
 $username = "root"; // Replace with your username
 $password = ""; // Replace with your password
@@ -32,23 +31,23 @@ $result = $conn->query($query);
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="html/home.html">Nerdy Gadgets</a>
+    <a class="navbar-brand" href="../html/home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="html/home.html"> Home </a>
+          <a class="nav-link" href="../html/home.html"> Home </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="html/producten.html"> Producten <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../html/producten.html"> Producten <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="html/contact.html"> Contact </a>
+          <a class="nav-link" href="../html/contact.html"> Contact </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="html/shoppingcart.html"> Winkelwagen</a>
+          <a class="nav-link" href="../html/shoppingcart.html"> Winkelwagen</a>
         </li>
       </ul>
     </div>
@@ -113,8 +112,8 @@ $result = $conn->query($query);
                 <div class="card-body">
                   <h5 class="card-title">'.$row["id"].'</h5>
                   <p class="card-text">'. $row["name"].'</p>
-                  <span class="product-price"> <strong>'. $row["price"].'-</strong> </span>
-                  <a href="html/shoppingcart.html" class="btn btn-primary float-right">Buy Now</a>
+                  <span class="product-price"> <strong>'. $row["price"]. '-</strong> </span>
+                  <a href="../html/shoppingcart.html" class="btn btn-primary float-right">Buy Now</a>
                 </div>
               </div>
             </div> 
