@@ -70,13 +70,6 @@ ORDER BY SUM(quantity) DESC";
           <p class="lead">Explore our amazing gadgets.</p>
 
                       <!-- productfilters -->
-              <?php
-              $productsoort = "laptops";
-              $prijsklasse = "laagste";
-              $sort = "laagsteprijs";
-
-
-              ?>
             <div class="container text-left">
                 <div style="background-color: #230536; color: #fff; padding: 20px; text-align: left;">
                     <p class="lead">productfilters.</p>
@@ -100,16 +93,18 @@ ORDER BY SUM(quantity) DESC";
                     <option value="hprijs">prijs van hoog naar laag</option>
                         <option value="populair">populair</option>
 
-                </select> <form>
+                </select>
+                    <div class="container text-right">
+                        <div style="background-color: #230536; color: #fff; padding: 20px; text-align: right;">
+                    <input type="submit" name="submit" value="Keuze bevestigen">
+                    <br>
+                    <input type="reset" value="filters resetten">-+
+
+                    <form>
 
         </div>
       </div>
           </div>
-  <div class="container text-right">
-      <div style="background-color: #230536; color: #fff; padding: 20px; text-align: right;">
-          <input type="submit" name="submit" value="Keuze bevestigen">
-          <br>
-          <input type="reset" value="filters resetten">
       </div>
   </div>
           </div>
