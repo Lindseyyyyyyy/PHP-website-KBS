@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winkelwagen</title>
+    <style>
+        /* ... (dezelfde CSS-styling zoals eerder) ... */
+    </style>
+</head>
+<body>
+<header>
+    <h1>Winkelwagen</h1>
+</header>
+
+<div class="cart-container">
+    <h2 class="cart-header">Geselecteerde Producten</h2>
+
+    <div id="cartItems"></div>
+
+    <!-- Het totaal aantal producten in de winkelwagen -->
+    <div class="total" id="totalItems">
+        Totaal aantal geselecteerde producten: 0
+    </div>
+    <div class="total" id="totalPrice">
+        Totaalprijs: €0,-
+    </div>
+    <button onclick="continueShopping()">Verder winkelen</button>
+</div>
+
+<script>
+    // Haal de bestaande winkelwagen op uit localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+    updateCartItems();
+
+    function updateCartItems() {
+        const cartItemsContainer = document.getElementById("cartItems");
+        cartItemsContainer.innerHTML = ""; // Clear de inhoud eerst
+
+        cart.forEach(item => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.innerHTML = `
+                <span class="item-name">${item.name}</span>
+                <span class="item-quantity">
+                    Aantal: <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity('${item.name}', ${item.price}, this.value)">
+                </span>
+                <span class="item-price">Prijs: €${item.price * item.quantity},-</span>
+                <button class="remove-btn" onclick="removeFromCart('${item.name}', ${item.price}, ${item.quantity})">Verwijder</button>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        // Update het totaal aantal producten in de winkelwagen
+        updateCartTotal();
+    }
+
+    function updateQuantity(productName, productPrice, newQuantity) {
+        const product = cart.find(item => item.name === productName);
+        const oldQuantity = product.quantity;
+        product.quantity = parseInt(newQuantity);
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Update de weergave van de producten in de winkelwagen
+        updateCartItems();
+
+        // Update de totaalprijs na wijzigen van de hoeveelheid
+        updateTotalPrice(productPrice * (parseInt(newQuantity) - oldQuantity));
+    }
+
+    function removeFromCart(productName, productPrice, productQuantity) {
+        // Verwijder het geselecteerde product uit de winkelwagen
+        cart = cart.filter(item => !(item.name === productName && item.quantity === productQuantity));
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Update de weergave van de producten in de winkelwagen
+        updateCartItems();
+
+        // Update de totaalprijs na verwijderen van het product
+        updateTotalPrice(-productPrice * productQuantity);
+    }
+
+    function updateCartTotal() {
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById("totalItems").innerText = `Totaal aantal geselecteerde producten: ${totalItems}`;
+
+        // Bereken de totaalprijs
+        const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+        document.getElementById("totalPrice").innerText = `Totaalprijs: €${totalPrice.toFixed(2)},-`;
+    }
+
+    function updateTotalPrice(amount) {
+        const totalPriceElement = document.getElementById("totalPrice");
+        const currentTotalPrice = parseFloat(totalPriceElement.innerText.split("€")[1].replace(",-", ""));
+        const newTotalPrice = currentTotalPrice + amount;
+        totalPriceElement.innerText = `Totaalprijs: €${newTotalPrice.toFixed(2)},-`;
+    }
+
+    function continueShopping() {
+        // Voeg hier de link toe naar de productpagina of waar je verder wilt winkelen
+        alert("Verder winkelen... Voeg hier de link toe naar de productpagina of waar je verder wilt winkelen.");
+    }
+</script>
+</body>
+</html>
+

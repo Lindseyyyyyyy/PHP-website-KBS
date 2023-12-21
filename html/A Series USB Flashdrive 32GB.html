@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSeat RS1 - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://img.office-deals.nl/w/Office_deals_A_series_Usb_Stick_Usb_2_0_16_Gb(10264743).jpg" alt="RSeat RS1">
+    <div class="product-details">
+        <h2 class="product-name">A Series USB Flashdrive 32GB</h2>
+        <p class="product-price">€12,50</p>
+        <p class="product-description">
+
+            De A Series USB Flash Drive van 32GB biedt een handige en draagbare opslagoplossing voor je digitale bestanden. Hier is een korte productbeschrijving:
+
+            De A Series USB Flash Drive met een capaciteit van 32GB is een betrouwbare en veelzijdige draagbare opslagoplossing waarmee je moeiteloos bestanden kunt opslaan, overbrengen en delen. Met zijn compacte formaat en plug-and-play-functionaliteit is deze USB-flashdrive ideaal voor dagelijks gebruik, zowel thuis als onderweg.
+
+            Met een royale opslagcapaciteit van 32 gigabyte biedt deze flashdrive voldoende ruimte voor het opslaan van documenten, foto's, video's en andere digitale bestanden. Of je nu werkt aan schoolprojecten, zakelijke documenten of gewoon herinneringen wilt bewaren, deze flashdrive heeft de ruimte die je nodig hebt.
+
+            Het duurzame ontwerp zorgt ervoor dat je bestanden veilig worden opgeslagen en beschermd tijdens transport. De USB 2.0- of USB 3.0-technologie (afhankelijk van het model) biedt snelle gegevensoverdrachtssnelheden, waardoor je tijd bespaart bij het kopiëren van bestanden van en naar de flashdrive.
+
+            Met zijn eenvoudige en intuïtieve ontwerp is de A Series USB Flash Drive gebruiksvriendelijk, zonder dat er extra software-installatie nodig is. Sluit de flashdrive eenvoudig aan op een USB-poort van je computer, laptop of compatibele apparaten en begin direct met het overbrengen van bestanden.
+
+            Deze A Series USB Flash Drive is een handige metgezel voor iedereen die op zoek is naar draagbare en betrouwbare opslag, of het nu gaat om het delen van bestanden met vrienden, het maken van back-ups van belangrijke documenten of het overbrengen van media tussen apparaten. Kortom, een essentiële accessoire voor eenvoudige gegevensopslag en -overdracht.
+
+
+
+
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+        cartCount += parseInt(quantity);
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+</script>
+</body>
+</html>

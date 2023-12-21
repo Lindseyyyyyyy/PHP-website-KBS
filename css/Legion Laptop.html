@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSeat RS1 - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://media.s-bol.com/3vYvkEEqM9Vx/ZMPnYE/550x466.jpg" alt="RSeat RS1">
+    <div class="product-details">
+        <h2 class="product-name">Legion Laptop</h2>
+        <p class="product-price">€1050,-</p>
+        <p class="product-description">
+
+            De Lenovo Legion-laptops staan bekend om hun krachtige prestaties en zijn ontworpen voor gaming en veeleisende taken. Hier is een korte productbeschrijving voor een willekeurige Lenovo Legion-laptop:
+
+            De Lenovo Legion-laptop is een krachtige gaminglaptop die ontworpen is om gamers een meeslepende en responsieve ervaring te bieden. Met zijn geavanceerde specificaties en innovatieve functies is deze laptop een favoriet onder gamers van verschillende niveaus.
+
+            Uitgerust met een krachtige processor, grafische kaart en snel RAM-geheugen levert de Legion-laptop indrukwekkende prestaties, waardoor je moeiteloos kunt genieten van de nieuwste games en veeleisende software. De geavanceerde koeltechnologie zorgt ervoor dat de laptop zelfs tijdens intensieve gamingsessies koel blijft, wat de duurzaamheid en prestaties ten goede komt.
+
+            Het indrukwekkende beeldscherm, vaak voorzien van een hoge verversingssnelheid en nauwkeurige kleurweergave, biedt een meeslepende visuele ervaring. Het verlichte toetsenbord, ontworpen voor comfortabel gamen, draagt bij aan de algehele esthetiek en functionaliteit van de laptop.
+
+            Dankzij de draagbaarheid van de Legion-laptop kun je overal gamen waar je maar wilt. Het gestroomlijnde ontwerp en de duurzame constructie maken het een aantrekkelijke keuze voor zowel thuisgebruik als onderweg.
+
+            Met functies zoals snelle SSD-opslag en geavanceerde connectiviteitsopties, waaronder snelle USB-poorten en mogelijkheden voor externe apparaten, biedt de Lenovo Legion-laptop een complete en hoogwaardige gamingervaring. Kortom, deze laptop is de ideale metgezel voor gamers die op zoek zijn naar krachtige prestaties en draagbaarheid in één.
+
+
+
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+        cartCount += parseInt(quantity);
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+</script>
+</body>
+</html>

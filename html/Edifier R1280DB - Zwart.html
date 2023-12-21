@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSeat RS1 - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://m.media-amazon.com/images/I/71yir9yyAfL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="RSeat RS1">
+    <div class="product-details">
+        <h2 class="product-name">Edifier R1280DB - Zwart</h2>
+        <p class="product-price">€130,-</p>
+        <p class="product-description">
+
+            De Edifier R1280DB in het zwart is een hoogwaardig 2.0 boekenplankluidsprekersysteem dat stijl en prestaties combineert voor een meeslepende luisterervaring. Met zijn strakke zwarte afwerking voegt dit luidsprekersysteem een vleugje elegantie toe aan elke ruimte.
+
+            Met een krachtige 42 watt RMS-output levert de R1280DB indrukwekkend geluid, geschikt voor zowel entertainment als audiofiele luisterervaringen. Het systeem beschikt over Bluetooth-connectiviteit, waardoor draadloos streamen vanaf je favoriete apparaten eenvoudig wordt.
+
+            Dankzij de handige afstandsbediening kun je het volume aanpassen, nummers overslaan en de bron selecteren zonder op te staan. De luidsprekers hebben ook meerdere ingangen, waaronder twee RCA-ingangen en een optische ingang, waardoor je verschillende apparaten moeiteloos kunt aansluiten.
+
+            De R1280DB is ontworpen met oog voor detail, met houten zijpanelen die niet alleen esthetisch aantrekkelijk zijn, maar ook bijdragen aan een verbeterde geluidskwaliteit. Kortom, de Edifier R1280DB in het zwart biedt een perfecte combinatie van stijl en prestaties voor de veeleisende audioliefhebber.
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+        cartCount += parseInt(quantity);
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+</script>
+</body>
+</html>
+
+
+
+
