@@ -14,19 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $query = "SELECT * FROM product ";
-$sorteer = "SELECT * FROM product ORDER BY price";
-$sorteerhoog= "SELECT * FROM product ORDER BY price DESC ";
-
-$category = "SELECT * 
-FROM product
-WHERE category in ('opslag', 'routers')";
-
-$populair= "SELECT product_id, SUM(quantity), P.*
-FROM order_item as O
-JOIN product as P on P.id = O.product_id
-GROUP BY product_id
-ORDER BY SUM(quantity) DESC";
-
+$result = $conn->query($query);
 
 ?>
 
@@ -78,7 +66,6 @@ ORDER BY SUM(quantity) DESC";
                 <div style="background-color: #230536; color: #fff; padding: 20px; text-align: left;">
                     <p class="lead">productfilters.</p>
             <form>
-                <form method="GET" action="productpagina.php">
               categorie: <input type="checkbox" name="productsoort" value= "laptops" > laptops
               <input type="checkbox" name="productsoort" value="phones" > phones
                 <input type="checkbox" name="productsoort" value="opslag"> opslag
@@ -91,49 +78,28 @@ ORDER BY SUM(quantity) DESC";
                 <input type="checkbox" name="prijsklasse" value="hoog" > boven de 250
                 <br>
 
-                producten sorteren op: <select name="sort" id="sorteren" >
-                    <option value="cat">categorie</option>
-                    <option value="lprijs">prijs van laag naar hoog</option>
-                    <option value="hprijs">prijs van hoog naar laag</option>
-                        <option value="populair">populair</option>
-
+                producten sorteren op: <select name="sorteren op" id="sorteren" >
+                    <option value="nieuw">nieuwste eerst</option>
+                    <option value="laagsteprijs">prijs van laag naar hoog</option>
+                    <option value="hoogsteprijs">prijs van hoog naar laag</option>
+                    <option value="niet"> populair </option>
                 </select>
-                    <div class="container text-right">
-                        <div style="background-color: #230536; color: #fff; padding: 20px; text-align: right;">
-                    <input type="submit" name="submit" value="Keuze bevestigen">
-                    <br>
-                    <input type="reset" value="filters resetten">-+
-
-                    <form>
-
         </div>
       </div>
           </div>
+  <div class="container text-right">
+      <div style="background-color: #230536; color: #fff; padding: 20px; text-align: right;">
+          <input type="submit" name="submit" value="Keuze bevestigenn">
+          <br>
+          <input type="reset" value="filters resetten">
       </div>
   </div>
           </div>
     </div>
 
-  <?php
-  $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
-
-  if ($sort == "lprijs"){
-      $query = $sorteer;
-  } else if($sort == "hprijs"){
-      $query = $sorteerhoog;
-  } else if($sort == "cat"){
-      $query = "SELECT * FROM product ORDER BY category";
-  } else if($sort == "populair"){
-      $query = $populair;
-  } else {
-      $query = $populair;
-  }
-
-  ?>
   <!-- Product Grid -->
 
     <?php
-    $result = $conn->query($query);
     if ($result->num_rows > 0) {
         // Output data of each row
         while ($row = $result->fetch_assoc()) {
@@ -152,8 +118,6 @@ ORDER BY SUM(quantity) DESC";
                 </div>
               </div>
             </div> 
-            </div>
-            
             </section>
             ';
         }

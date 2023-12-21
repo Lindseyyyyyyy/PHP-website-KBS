@@ -10,7 +10,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../productpagina.php">producten</a>
+          <a class="nav-link" href="productpagina.php">producten</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>

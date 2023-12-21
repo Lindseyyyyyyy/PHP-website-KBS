@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Reviews</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/Reviews.css">
+    </head>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="home.html"><img id="logo" src="../Goedeimages/LogoNG.png" alt="Logo" height="100" width="125">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="home.html"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="producten.html"> Producten </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"> Contact </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <body>
+
+    <!-- sterren -->
+
+    <div class="mening-box">
+    <span class="heading">Gebruikersbeoordelingen</span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <p>4.1 gemiddeld gebaseerd op 254 reviews.</p>
+    <hr style="border:3px solid #f1f1f1">
+
+    <div class="row">
+        <div class="side">
+            <div>5 sterren</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+                <div class="bar-5"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>150</div>
+        </div>
+        <div class="side">
+            <div>4 sterren</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+                <div class="bar-4"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>63</div>
+        </div>
+        <div class="side">
+            <div>3 sterren</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+                <div class="bar-3"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>15</div>
+        </div>
+        <div class="side">
+            <div>2 sterren</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+                <div class="bar-2"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>6</div>
+        </div>
+        <div class="side">
+            <div>1 ster</div>
+        </div>
+        <div class="middle">
+            <div class="bar-container">
+                <div class="bar-1"></div>
+            </div>
+        </div>
+        <div class="side right">
+            <div>20</div>
+        </div>
+    </div>
+    </body>
+ </html>
+
+
+ <body>
+<!-- reviews beoordeling geven -->
+ <div class="review-form">
+     <h2>Laat een review achter</h2>
+     <form action="../php/reviews.php" method="post">
+         <label for="name">Naam:</label>
+         <input type="text" id="name" name="name" required>
+
+         <label for="rating">Beoordeling:</label>
+         <select id="rating" name="rating" required>
+             <option value="5">5 Sterren</option>
+             <option value="4">4 Sterren</option>
+             <option value="3">3 Sterren</option>
+             <option value="2">2 Sterren</option>
+             <option value="1">1 Ster</option>
+         </select>
+
+         <label for="review">Review:</label>
+         <textarea id="review" name="review" rows="4" required></textarea>
+
+         <button type="submit">Verzenden</button>
+     </form>
+ </div>
+
+ </body>
