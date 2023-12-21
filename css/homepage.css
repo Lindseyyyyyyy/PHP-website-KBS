@@ -40,6 +40,10 @@
 .navbar {
     background-color: rgba(0, 0, 0, 0.1);
 }
+.navbar-logo {
+    height: 40px; /* Pas de hoogte aan zoals nodig */
+    margin-right: 10px; /* Voeg wat ruimte toe tussen de afbeelding en de tekst */
+}
 
 .cover {
     background-image: url('https://hyper-reality.io/wp-content/uploads/2019/08/home-header-ps.gif');
@@ -64,6 +68,28 @@
     flex-direction: column;
     justify-content: center;
 }
+
+#logoContainer {
+    position: relative;
+}
+
+#hiddenContent {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #000000;
+}
+
+#hiddenContent p {
+    color: red;
+    font-size: 24px;
+    margin: 0;
+}
+
 
 
 .btn-primary {
@@ -158,3 +184,32 @@ a {
     background-color: rgba(204, 0, 198, 0.5);
     text-align: center;
 }
+
+
+ .balloon {
+     width: 20px;
+     height: 30px;
+     background-color: #3498db;
+     border-radius: 50%;
+     position: fixed;
+     animation: floatUp 3s ease-in-out infinite, colorChange 5s infinite;
+ }
+
+@keyframes floatUp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #e74c3c;
+    }
+}
+
