@@ -17,6 +17,10 @@ $query = "SELECT * FROM product ";
 $sorteer = "SELECT * FROM product ORDER BY price";
 $sorteerhoog= "SELECT * FROM product ORDER BY price DESC ";
 
+$category = "SELECT * 
+FROM product
+WHERE category in ('opslag', 'routers')";
+
 $populair= "SELECT product_id, SUM(quantity), P.*
 FROM order_item as O
 JOIN product as P on P.id = O.product_id
@@ -119,8 +123,6 @@ ORDER BY SUM(quantity) DESC";
       $query = $sorteerhoog;
   } else if($sort == "cat"){
       $query = "SELECT * FROM product ORDER BY category";
-  } else if($sort == "abc") {
-      $query = "SELECT * FROM product ORDER BY name";
   } else if($sort == "populair"){
       $query = $populair;
   } else {
