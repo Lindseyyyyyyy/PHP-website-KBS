@@ -16,25 +16,25 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$query = "SELECT * FROM product ";
-$sorteer = "SELECT * FROM product ORDER BY price";
-$sorteerhoog= "SELECT * FROM product ORDER BY price DESC ";
+
+$id = isset($_GET['id']) ? $_GET['id'] : '';
+
+$query = "SELECT * FROM product WHERE id = $id ";
+
 
 $category = "SELECT * 
 FROM product
 WHERE category in ('opslag', 'routers')";
 
-$populair= "SELECT product_id, SUM(quantity), P.*
-FROM order_item as O
-JOIN product as P on P.id = O.product_id
-GROUP BY product_id
-ORDER BY SUM(quantity) DESC";
+$result = $conn->query($query);
+$row = $row = $result->fetch_assoc();
 
 
-?>
+if ($result->num_rows > 0) {
+    echo "hello dit is het product waar je op hebt gedrukt. De id is" .$row["id"]. "dit moet het zelfde zijn als" . $_GET["id"]. "<br>". " de naam van het product is". $row["name"]."<br>". "de omschrijving is". $row["description"]."<br>". "en het product kost". $row["price"]. " euro";
+}
 
-Welcome <?php echo $_GET["id"]; ?>!
-de prijs is
+; ?>!
 
 </body>
 </html>

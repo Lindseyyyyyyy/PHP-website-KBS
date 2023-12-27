@@ -14,6 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $query = "SELECT * FROM product ";
+
 $sorteer = "SELECT * FROM product ORDER BY price";
 $sorteerhoog= "SELECT * FROM product ORDER BY price DESC ";
 
@@ -145,7 +146,8 @@ if ($result->num_rows > 0) {
 
                 <img src="productimages/'.$row["image"].'.jpg" class="card-img-top" alt="pc">
                 <div class="card-body">
-                  <h5 class="card-title"> '.$row["name"].'</h5>
+                  <h5 class="card-title"> '.$row["name"]. ' </h5>
+                  <a href="http://localhost/KBSnerdygadgets/php/ptest.php?id='.$row["id"].'"> productdetailpagina </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"].'-</strong> </span>
                   <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
