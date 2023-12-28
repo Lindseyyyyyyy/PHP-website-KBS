@@ -133,34 +133,35 @@ if ($sort == "lprijs"){
 ?>
 <!-- Product Grid -->
 
+<section class="container my-5">
+    <div class="row mb-4">
 <?php
 $result = $conn->query($query);
 if ($result->num_rows > 0) {
     // Output data of each row
     while ($row = $result->fetch_assoc()) {
         echo
-            '<section class="container my-5">
-            <div class="row mb-4">
-            <div class="col-lg-4">
-              <div class="card">
-
+            '<div class="col-lg-4">
+              <div class="card"> 
                 <img src="productimages/'.$row["image"].'.jpg" class="card-img-top" alt="pc">
                 <div class="card-body">
                   <h5 class="card-title"> '.$row["name"]. ' </h5>
-                  <a href="http://localhost/KBSnerdygadgets/php/ptest.php?id='.$row["id"].'"> productdetailpagina </a>
+                  <a href="http://localhost/KBSnerdygadgets/php/ptest.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"].'-</strong> </span>
                   <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 
-            </div>
             
-            </section>
             ';
     }
 } else {
     echo "<br>No results found<br>";} ?>
+
+    </div>
+
+</section>
 
 </body>
 <!-- Footer -->
