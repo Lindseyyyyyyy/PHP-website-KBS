@@ -7,6 +7,28 @@
     font-family: 'gili sans', sans-serif;
 }
 
+#logoContainer {
+    position: relative;
+}
+
+#hiddenContent {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #37eaff;
+    padding: 20px;
+    border: 2px solid #cb1fe6;
+}
+
+#hiddenContent p {
+    color: purple;
+    font-size: 24px;
+    margin: 0;
+}
+
+
 .maincards {
     /*margin: 3.3% 0 100px;*/
     /*outline-color: #daa671;*/
@@ -215,7 +237,7 @@ body {
 
 
 .cover {
-    background-image: url('https://i.ytimg.com/vi/5peR4WcZ07E/maxresdefault.jpg');
+    background-image: url('https://media.tenor.com/Eg0O0y22HOcAAAAC/cyberpunk.gif');
     filter: brightness(65%);
     background-size: cover;
     background-position: center;
@@ -386,3 +408,6 @@ a {
     text-align: center;
     color: white;
 }
+
+
+

@@ -10,8 +10,7 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <img src="https://trello.com/1/cards/651d3a9486abe53f75f2589f/attachments/651d3aeea8443f95827f8f53/download/image.png"  class="navbar-logo"> <!-- Voeg hier je afbeelding toe -->
-        <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
+        <a class="navbar-brand" href="home.html"><img id="logo" src="../Goedeimages/LogoNG.png" alt="Logo" height="100" width="125">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,6 +32,8 @@
         </div>
     </nav>
     <body>
+
+    <!-- sterren -->
 
     <div class="mening-box">
     <span class="heading">Gebruikersbeoordelingen</span>
@@ -101,16 +102,15 @@
             <div>20</div>
         </div>
     </div>
-
     </body>
  </html>
 
 
  <body>
-
+<!-- reviews beoordeling geven -->
  <div class="review-form">
      <h2>Laat een review achter</h2>
-     <form action="#" method="post">
+     <form action="../php/reviews.php" method="post">
          <label for="name">Naam:</label>
          <input type="text" id="name" name="name" required>
 
