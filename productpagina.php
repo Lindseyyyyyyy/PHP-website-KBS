@@ -38,7 +38,7 @@ ORDER BY SUM(quantity) DESC";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Nerdy Gadgets</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="css/products.css">
 
 </head>
 <body>
@@ -146,7 +146,7 @@ if ($result->num_rows > 0) {
                 <img src="productimages/'.$row["image"].'.jpg" class="card-img-top" alt="pc">
                 <div class="card-body">
                   <h5 class="card-title"> '.$row["name"]. ' </h5>
-                  <a href="http://localhost/KBSnerdygadgets/php/ptest.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
+                  <a href="http://localhost/KBSnerdygadgets/ptest.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"].'-</strong> </span>
                   <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
