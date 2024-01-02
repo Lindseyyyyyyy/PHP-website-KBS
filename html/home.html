@@ -3,13 +3,26 @@
 <head>
   <title>Nerdy Gadgets</title>
   <meta charset="UTF-8">
-<body style="background-color: #4b0082;">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/aanbevolen.css">
-</head>
-<body>
 
+  <style>
+    .falling-letters {
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .falling-letters span {
+      display: inline-block;
+      transform: translateY(0);
+      transition: transform 0.5s ease-out;
+    }
+  </style>
+
+</head>
+
+<body style="background-color: #4b0082;">
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <img src="https://trello.com/1/cards/651d3a9486abe53f75f2589f/attachments/651d3aeea8443f95827f8f53/download/image.png"  class="navbar-logo"> <!-- Voeg hier je afbeelding toe -->
@@ -39,7 +52,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Nerdy Gadgets</h1>
+        <h1 class="falling-letters" id="nerdy-gadgets">Nerdy Gadgets</h1>
         <p>Unlock your inner geek.</p>
         <a href="ourfavorite.html" class="btn btn-primary">Our favorite</a>
       </div>
@@ -167,13 +180,13 @@
     <hr>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Vul E-mail in" name="email" id="email" required>
+    <input type="text" placeholder="Vul E-mail in" name="email" id="email" required autocomplete="email">
 
     <label for="psw"><b>Wachtwoord</b></label>
-    <input type="password" placeholder="Voer Wachtwoord in" name="psw" id="psw" required>
+    <input type="password" placeholder="Voer Wachtwoord in" name="psw" id="psw" required autocomplete="new-password">
 
     <label for="psw-repeat"><b>Herhaal Wachtwoord</b></label>
-    <input type="password" placeholder="Herhaal Wachtwoord" name="psw-repeat" id="psw-repeat" required>
+    <input type="password" placeholder="Herhaal Wachtwoord" name="psw-repeat" id="psw-repeat" required autocomplete="new-password">
     <hr>
     <p>Door een account aan te maken ga je akkoord met onze <a href="#">Algemene voorwaarden en Privacbeleid</a>.</p>
 
@@ -181,15 +194,48 @@
   </div>
 
   <div class="container signin">
-    <p>Heb je al een account? <a href="Login.html">Log hier in!</a>.</p>
+    <p>Heb je al een account? <a href="Login.html">Log hier in!</a></p>
   </div>
 </form>
 
 
+
+
+
+<script>
+  // Voeg een click-eventlistener toe aan het Nerdy Gadgets-element
+  document.getElementById("nerdy-gadgets").addEventListener("click", function() {
+    // Haal de tekst op
+    var text = document.getElementById("nerdy-gadgets").innerText;
+
+    // Vervang elke letter door een span-element met een unieke ID
+    var letters = text.split("").map(function(char, index) {
+      return "<span id='letter-" + index + "'>" + char + "</span>";
+    });
+
+    // Voeg de letters terug toe aan het element
+    document.getElementById("nerdy-gadgets").innerHTML = letters.join("");
+
+    // Voer de animatie uit
+    letters.forEach(function(_, index) {
+      var letterElement = document.getElementById("letter-" + index);
+      setTimeout(function() {
+        letterElement.style.transform = "translateY(300px) rotate(" + (Math.random() * 360) + "deg)";
+      }, index * 50);
+    });
+
+    // Verberg de tekst na 15 seconden
+    setTimeout(function() {
+      document.getElementById("nerdy-gadgets").innerHTML = text;
+    }, 4000);
+  });
+</script>
+
 <!-- Bootstrap Scripts -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+
 </body>
 </html>
