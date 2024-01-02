@@ -1,30 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Nerdy Gadgets</title>
   <meta charset="UTF-8">
   <script src="../java/registratie.js"></script>
-<body style="background-color: #4b0082;">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/aanbevolen.css">
-
-<style>
-  .falling-letters {
-    display: inline-block;
-    overflow: hidden;
-  }
-
-  .falling-letters span {
-    display: inline-block;
-    transform: translateY(0);
-    transition: transform 0.5s ease-out;
-  }
-</style>
-
+<link rel="stylesheet" href="../css/egglin.css">
 </head>
-<body>
 
+<body style="background-color: #4b0082;">
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <a class="navbar-brand" href="home.html"></a>
@@ -42,7 +30,7 @@
   <div id="hiddenContent">
     <img src="https://codingireland.blob.core.windows.net/images/steps%5Csceegc%20banner%20animation.gif" alt="Easter Egg GIF" height="150" width="220">
   </div>
-  <script src="../java/easteregg.js"></script>
+
   </body>
 
   <!-- Verder met Navbar -->
@@ -76,6 +64,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- de top 3 gadgets -->
 <section class="cover3 container">
@@ -218,39 +207,13 @@
   </div>
 </form>
 
-<script>
-  // Voeg een click-eventlistener toe aan het Nerdy Gadgets-element
-  document.getElementById("nerdy-gadgets").addEventListener("click", function() {
-    // Haal de tekst op
-    var text = document.getElementById("nerdy-gadgets").innerText;
 
-    // Vervang elke letter door een span-element met een unieke ID
-    var letters = text.split("").map(function(char, index) {
-      return "<span id='letter-" + index + "'>" + char + "</span>";
-    });
 
-    // Voeg de letters terug toe aan het element
-    document.getElementById("nerdy-gadgets").innerHTML = letters.join("");
-
-    // Voer de animatie uit
-    letters.forEach(function(_, index) {
-      var letterElement = document.getElementById("letter-" + index);
-      setTimeout(function() {
-        letterElement.style.transform = "translateY(300px) rotate(" + (Math.random() * 360) + "deg)";
-      }, index * 50);
-    });
-
-    // Laat de originele tekst na 5 seconden weer verschijnen
-    setTimeout(function() {
-      document.getElementById("nerdy-gadgets").innerHTML = text;
-    }, 4000);
-  });
-</script>
 
 <!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+<script src="../java/egglin.js"></script>
 </body>
 </html>
