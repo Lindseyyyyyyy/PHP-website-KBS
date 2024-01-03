@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
                 <img src="productimages/'.$rij["image"].'.jpg" class="card-img-top" alt="pc">
                 <div class="card-body">
                   <h5 class="card-title"> '.$rij["name"]. ' </h5>
-                  <a href="http://localhost/KBSnerdygadgets/ptest.php?id='.$rij["id"].'"> klik hier om naar de productpagina te gaan </a>
+                  <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$rij["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($rij["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $rij["price"].'-</strong> </span>
                   <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
