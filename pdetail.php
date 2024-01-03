@@ -101,11 +101,25 @@ if ($result->num_rows > 0) {
             ';
     }
 } else {
-    echo "<br>geen aanbevolen producten<br>";} ?>
+    echo "<br>geen aanbevolen producten<br>";}
+
+?>
 
 </div>
-
+    <div class="col-lg-4">
+        <div class="card">
+            <img src="img/easteregg.webp" class="card-img-top" alt="pc">
+            <div class="card-body">
+                <h5 class="card-title"> supercoolerozecomputer 2.596 </h5>
+                <a href="eggjulie.php"> klik hier om naar de productpagina te gaan </a>
+                <p class="card-text"> jouw favoriete gadget </p>
+                <span class="product-price"> <strong> $0,- </strong> </span>
+                <a href="html/pstuur.php" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+            </div>
+        </div>
+    </div>
 </section>
+
 
 </body>
 <footer class="footer">
@@ -119,3 +133,7 @@ if ($result->num_rows > 0) {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>
+
+<?php
+$conn ->close();
+?>

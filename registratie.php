@@ -42,7 +42,7 @@ if ($regis->execute()) {
 }
 $conn->close()
 ?>
-<form method="post" action="logintest.php">
+<form method="post" action="registratie.php">
   <div class="container1">
     <h1>Registreer</h1>
     <p>Vul uw gegevens in om een account aan te maken. Velden met een * zijn verplicht. </p>
