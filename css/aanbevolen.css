@@ -12,17 +12,17 @@
 
 #hiddenContent {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #37eaff;
+    background-color: #a317aa;
     padding: 20px;
-    border: 2px solid #cb1fe6;
+    border: 2px solid #060ebb;
 }
 
 #hiddenContent p {
-    color: purple;
+    color: deeppink;
     font-size: 24px;
     margin: 0;
 }
