@@ -6,7 +6,7 @@ if (isset($_GET['search_term'])) {
     // Voeg de zoekterm toe aan de database
     $dbHost = "localhost";
     $dbUser = "root";
-    $dbPassword = "Lovinadolfijn123!@";
+    $dbPassword = "";
     $dbName = "nerdy_gadgets";
 
     $conn = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
