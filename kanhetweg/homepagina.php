@@ -41,7 +41,7 @@
         <a class="nav-link" href="../html/home.html"> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../productpagina.php"> Producten </a>
+        <a class="nav-link" href="../html/productpagina.php"> Producten </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../html/contact.html"> Contact </a>
@@ -203,7 +203,7 @@ Snelle levering. Had het 2 dagen na bestellen al binnen!
   <script src="../java/registratie.js"></script>
 
   <div class="container signin">
-    <p>Heb je al een account? <a href="registratie.html">Log hier in!</a>.</p>
+    <p>Heb je al een account? <a href="../html/inlogversie.html">Log hier in!</a>.</p>
   </div>
 </form>
 

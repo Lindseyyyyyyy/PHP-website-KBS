@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Nerdy Gadgets</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="../css/products.css">
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="html/home.html">Nerdy Gadgets</a>
+    <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="html/home.html"> Home </a>
+                <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="html/contact.html"> Contact </a>
+                <a class="nav-link" href="contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="html/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -92,8 +92,8 @@ if ($result->num_rows > 0) {
                   <h5 class="card-title"> '.$rij["name"]. ' </h5>
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$rij["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($rij["description"],0,50)."...".'</p>
-                  <span class="product-price"> <strong>'."€". $rij["price"].'-</strong> </span>
-                  <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <span class="product-price"> <strong>'."€". $rij["price"]. '-</strong> </span>
+                  <a href="shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 
@@ -108,7 +108,7 @@ if ($result->num_rows > 0) {
 </div>
     <div class="col-lg-4">
         <div class="card">
-            <img src="img/easteregg.webp" class="card-img-top" alt="pc">
+            <img src="../img/easteregg.webp" class="card-img-top" alt="pc">
             <div class="card-body">
                 <h5 class="card-title"> supercoolerozecomputer 2.596 </h5>
                 <a href="eggjulie.php"> klik hier om naar de productpagina te gaan </a>
