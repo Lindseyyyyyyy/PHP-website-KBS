@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legion Laptop - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .remove-from-cart {
+            background-color: #e74c3c; /* Rode achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://img.office-deals.nl/w/Office_deals_A_series_Usb_Stick_Usb_2_0_16_Gb(10264743).jpg" alt="Legion Laptop">
+    <div class="product-details">
+        <h2 class="product-name">A Series USB Flashdrive 32GB</h2>
+        <p class="product-price">€12,50</p>
+        <p class="product-description">
+
+            De A Series USB Flash Drive met een capaciteit van 32GB is een draagbaar en handig opslagapparaat waarmee je eenvoudig en snel gegevens kunt opslaan, overdragen en delen. Deze compacte flashdrive combineert gebruiksgemak met een ruime opslagcapaciteit, waardoor het een handige metgezel is voor onderweg.
+
+            Met zijn slanke ontwerp en robuuste behuizing is de A Series USB Flash Drive niet alleen functioneel, maar ook duurzaam. Het is ideaal voor dagelijks gebruik, of je nu werkt, studeert of je multimedia-inhoud wilt meenemen. Het compacte formaat maakt het gemakkelijk om in je zak, tas of zelfs aan je sleutelhanger te dragen.
+
+            De 32GB opslagcapaciteit biedt voldoende ruimte voor het opslaan van documenten, afbeeldingen, muziek en video's. Of je nu belangrijke werkbestanden, studiemateriaal of persoonlijke media wilt meenemen, deze flashdrive maakt het mogelijk om je gegevens overal mee naartoe te nemen.
+
+            De A Series USB Flash Drive is plug-and-play, wat betekent dat je geen extra software nodig hebt om het te gebruiken. Sluit het eenvoudigweg aan op een USB-poort van je computer, laptop of compatibele apparaten en je bent klaar om gegevens over te zetten. Dankzij de USB 2.0- of USB 3.0-technologie verloopt de gegevensoverdracht snel en efficiënt.
+
+            Kortom, de A Series USB Flash Drive met 32GB opslagcapaciteit biedt een handige en draagbare oplossing voor het opslaan en overdragen van gegevens. Het is een veelzijdig accessoire dat tegemoet komt aan de behoeften van gebruikers die op zoek zijn naar draagbare en betrouwbare opslagmogelijkhede
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+        <button class="remove-from-cart" onclick="removeFromCart()">Verwijder uit winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    // Haal de bestaande winkelwagen op uit localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+
+        // Voeg het geselecteerde product toe aan de winkelwagen
+        cart.push({
+            name: "Legion Laptop",
+            price: 1050,
+            quantity: parseInt(quantity)
+        });
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function removeFromCart() {
+        // Verwijder het product uit de winkelwagen
+        cart = [];
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        // Bereken het totaal aantal producten in de winkelwagen
+        cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+        // Update de weergave van het totaal aantal producten in de winkelwagen
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+
+    // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+    updateCartCount();
+</script>
+</body>
+</html>
+

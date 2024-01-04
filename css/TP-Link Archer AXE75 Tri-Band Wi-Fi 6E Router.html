@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legion Laptop - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .remove-from-cart {
+            background-color: #e74c3c; /* Rode achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDQXyxX3BIEKb8wfOw9w0LunyqpiRNCo0FSTpyj1uy3dgpXj40uyaA4hTT9FAiZgtTqdk&usqp=CAU" alt="Legion Laptop">
+    <div class="product-details">
+        <h2 class="product-name">TP-Link Archer AXE75 Tri-Band Wi-Fi 6E Router</h2>
+        <p class="product-price">€190,-</p>
+        <p class="product-description">
+        TP-Link Archer AXE75 Tri-Band Wi-Fi 6E Router
+
+        Ervaar de volgende stap in draadloze connectiviteit met de TP-Link Archer AXE75 Tri-Band Wi-Fi 6E Router. Deze geavanceerde router biedt ongekende prestaties en naadloze connectiviteit voor moderne huishoudens en bedrijven.
+
+        Wi-Fi 6E-technologie zorgt voor hogere snelheden, meer capaciteit en minder congestie, waardoor een vloeiende online ervaring ontstaat. Met tri-band connectiviteit op 2,4 GHz, 5 GHz en 6 GHz kunnen meerdere apparaten gelijktijdig optimaal presteren, ideaal voor 4K-streaming, online gaming en het verbinden van talloze slimme apparaten.
+
+        Geniet van ultrasnelle snelheden, betrouwbaarheid en een uitgebreid bereik dankzij hoogwaardige antennes en beamforming-technologie. De router biedt geavanceerde beveiliging met WPA3-encryptie en een krachtige quad-core processor voor efficiënte gegevensverwerking.
+
+        Eenvoudige installatie en beheer worden mogelijk gemaakt via de intuïtieve TP-Link Tether-app, waarmee je je netwerk eenvoudig kunt instellen, beheren en monitoren. De Smart Connect-technologie wijst automatisch elk apparaat toe aan de meest geschikte band voor optimale prestaties.
+
+        Upgrade je netwerk naar de toekomst met de TP-Link Archer AXE75 Tri-Band Wi-Fi 6E Router - zeg vaarwel tegen buffering en geniet van een stabiele, razendsnelle draadloze ervaring voor al je apparaten.
+
+
+
+
+
+
+
+
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+        <button class="remove-from-cart" onclick="removeFromCart()">Verwijder uit winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    // Haal de bestaande winkelwagen op uit localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+
+        // Voeg het geselecteerde product toe aan de winkelwagen
+        cart.push({
+            name: "Legion Laptop",
+            price: 1050,
+            quantity: parseInt(quantity)
+        });
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function removeFromCart() {
+        // Verwijder het product uit de winkelwagen
+        cart = [];
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        // Bereken het totaal aantal producten in de winkelwagen
+        cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+        // Update de weergave van het totaal aantal producten in de winkelwagen
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+
+    // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+    updateCartCount();
+</script>
+</body>
+</html>
+

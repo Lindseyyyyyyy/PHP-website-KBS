@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legion Laptop - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .remove-from-cart {
+            background-color: #e74c3c; /* Rode achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://simracingstore.nl/wp-content/uploads/2021/02/4-TS-XWRacerSparcoP310-PR4.jpg" alt="Legion Laptop">
+    <div class="product-details">
+        <h2 class="product-name">Thrustmaster TS-XW Racer Sparco P310 Competition Mod</h2>
+        <p class="product-price">€300,-</p>
+        <p class="product-description">
+
+            De Thrustmaster TS-XW Racer Sparco P310 Competition Mod is een geavanceerd racesysteem ontworpen voor serieuze simulatie-enthousiastelingen. Het stelt gebruikers in staat om een realistische en meeslepende race-ervaring te beleven, compleet met nauwkeurige besturing en een ergonomisch ontworpen stuurwiel.
+
+            Het Sparco P310 Competition Mod-stuurwiel, dat is ontworpen in samenwerking met Sparco, biedt een authentieke race-ervaring met een diameter van 31 cm en een ergonomische grip. Het is voorzien van een Quick Release-systeem voor eenvoudige installatie en verwijdering.
+
+            De TS-XW Racer base is voorzien van een borstelloze motor voor krachtige force feedback-effecten. Dit levert realistische trillingen en krachten tijdens het racen, waardoor gebruikers de sensatie van de weg en het voertuig nauwkeurig kunnen voelen.
+
+            De HallEffect AccuRate Technology zorgt voor nauwkeurige en consistente sensorprestaties, terwijl de H.E.A.R.T (HallEffect AccuRate Technology) HallEffect-sensoren ervoor zorgen dat er geen tact-switches worden gebruikt, waardoor duurzaamheid en precisie worden verbeterd.
+
+            Met de T3PA pedaalset, die is voorzien van drie pedalen en een conische rubberen remmod, kunnen gebruikers nauwkeurig gas geven, remmen en koppelen voor een authentieke rijervaring.
+
+            De Thrustmaster TS-XW Racer Sparco P310 Competition Mod is compatibel met diverse platforms, waaronder pc en Xbox One, waardoor het een veelzijdige keuze is voor enthousiaste simracers die op zoek zijn naar een hoogwaardige en realistische race-ervaring.
+
+
+
+
+
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+        <button class="remove-from-cart" onclick="removeFromCart()">Verwijder uit winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    // Haal de bestaande winkelwagen op uit localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+
+        // Voeg het geselecteerde product toe aan de winkelwagen
+        cart.push({
+            name: "Legion Laptop",
+            price: 1050,
+            quantity: parseInt(quantity)
+        });
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function removeFromCart() {
+        // Verwijder het product uit de winkelwagen
+        cart = [];
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        // Bereken het totaal aantal producten in de winkelwagen
+        cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+        // Update de weergave van het totaal aantal producten in de winkelwagen
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+
+    // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+    updateCartCount();
+</script>
+</body>
+</html>
