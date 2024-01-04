@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSeat RS1 - Webshop</title>
+    <title>Legion Laptop - Webshop</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -106,6 +106,17 @@
             padding: 5px;
             border-radius: 5px;
         }
+
+        .remove-from-cart {
+            background-color: #e74c3c; /* Rode achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -114,27 +125,21 @@
 </header>
 
 <div class="product-container">
-    <img class="product-image" src="https://img.office-deals.nl/w/Office_deals_A_series_Usb_Stick_Usb_2_0_16_Gb(10264743).jpg" alt="RSeat RS1">
+    <img class="product-image" src="https://img.office-deals.nl/w/Office_deals_A_series_Usb_Stick_Usb_2_0_16_Gb(10264743).jpg" alt="Legion Laptop">
     <div class="product-details">
         <h2 class="product-name">A Series USB Flashdrive 32GB</h2>
         <p class="product-price">€12,50</p>
         <p class="product-description">
 
-            De A Series USB Flash Drive van 32GB biedt een handige en draagbare opslagoplossing voor je digitale bestanden. Hier is een korte productbeschrijving:
+            De A Series USB Flash Drive met een capaciteit van 32GB is een draagbaar en handig opslagapparaat waarmee je eenvoudig en snel gegevens kunt opslaan, overdragen en delen. Deze compacte flashdrive combineert gebruiksgemak met een ruime opslagcapaciteit, waardoor het een handige metgezel is voor onderweg.
 
-            De A Series USB Flash Drive met een capaciteit van 32GB is een betrouwbare en veelzijdige draagbare opslagoplossing waarmee je moeiteloos bestanden kunt opslaan, overbrengen en delen. Met zijn compacte formaat en plug-and-play-functionaliteit is deze USB-flashdrive ideaal voor dagelijks gebruik, zowel thuis als onderweg.
+            Met zijn slanke ontwerp en robuuste behuizing is de A Series USB Flash Drive niet alleen functioneel, maar ook duurzaam. Het is ideaal voor dagelijks gebruik, of je nu werkt, studeert of je multimedia-inhoud wilt meenemen. Het compacte formaat maakt het gemakkelijk om in je zak, tas of zelfs aan je sleutelhanger te dragen.
 
-            Met een royale opslagcapaciteit van 32 gigabyte biedt deze flashdrive voldoende ruimte voor het opslaan van documenten, foto's, video's en andere digitale bestanden. Of je nu werkt aan schoolprojecten, zakelijke documenten of gewoon herinneringen wilt bewaren, deze flashdrive heeft de ruimte die je nodig hebt.
+            De 32GB opslagcapaciteit biedt voldoende ruimte voor het opslaan van documenten, afbeeldingen, muziek en video's. Of je nu belangrijke werkbestanden, studiemateriaal of persoonlijke media wilt meenemen, deze flashdrive maakt het mogelijk om je gegevens overal mee naartoe te nemen.
 
-            Het duurzame ontwerp zorgt ervoor dat je bestanden veilig worden opgeslagen en beschermd tijdens transport. De USB 2.0- of USB 3.0-technologie (afhankelijk van het model) biedt snelle gegevensoverdrachtssnelheden, waardoor je tijd bespaart bij het kopiëren van bestanden van en naar de flashdrive.
+            De A Series USB Flash Drive is plug-and-play, wat betekent dat je geen extra software nodig hebt om het te gebruiken. Sluit het eenvoudigweg aan op een USB-poort van je computer, laptop of compatibele apparaten en je bent klaar om gegevens over te zetten. Dankzij de USB 2.0- of USB 3.0-technologie verloopt de gegevensoverdracht snel en efficiënt.
 
-            Met zijn eenvoudige en intuïtieve ontwerp is de A Series USB Flash Drive gebruiksvriendelijk, zonder dat er extra software-installatie nodig is. Sluit de flashdrive eenvoudig aan op een USB-poort van je computer, laptop of compatibele apparaten en begin direct met het overbrengen van bestanden.
-
-            Deze A Series USB Flash Drive is een handige metgezel voor iedereen die op zoek is naar draagbare en betrouwbare opslag, of het nu gaat om het delen van bestanden met vrienden, het maken van back-ups van belangrijke documenten of het overbrengen van media tussen apparaten. Kortom, een essentiële accessoire voor eenvoudige gegevensopslag en -overdracht.
-
-
-
-
+            Kortom, de A Series USB Flash Drive met 32GB opslagcapaciteit biedt een handige en draagbare oplossing voor het opslaan en overdragen van gegevens. Het is een veelzijdig accessoire dat tegemoet komt aan de behoeften van gebruikers die op zoek zijn naar draagbare en betrouwbare opslagmogelijkhede
         </p>
         <label for="quantity">Aantal:</label>
         <select id="quantity" class="quantity-select">
@@ -145,6 +150,7 @@
             <option value="5">5</option>
         </select>
         <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+        <button class="remove-from-cart" onclick="removeFromCart()">Verwijder uit winkelwagen</button>
     </div>
 </div>
 
@@ -156,13 +162,50 @@
 </div>
 
 <script>
+    // Haal de bestaande winkelwagen op uit localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     let cartCount = 0;
 
     function addToCart() {
         const quantity = document.getElementById("quantity").value;
-        cartCount += parseInt(quantity);
+
+        // Voeg het geselecteerde product toe aan de winkelwagen
+        cart.push({
+            name: "Legion Laptop",
+            price: 1050,
+            quantity: parseInt(quantity)
+        });
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function removeFromCart() {
+        // Verwijder het product uit de winkelwagen
+        cart = [];
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        // Bereken het totaal aantal producten in de winkelwagen
+        cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+        // Update de weergave van het totaal aantal producten in de winkelwagen
         document.getElementById("cartCount").innerText = cartCount;
     }
+
+    // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+    updateCartCount();
 </script>
 </body>
 </html>
+

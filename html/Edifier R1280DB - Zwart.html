@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSeat RS1 - Webshop</title>
+    <title>Legion Laptop - Webshop</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -106,6 +106,17 @@
             padding: 5px;
             border-radius: 5px;
         }
+
+        .remove-from-cart {
+            background-color: #e74c3c; /* Rode achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -114,19 +125,23 @@
 </header>
 
 <div class="product-container">
-    <img class="product-image" src="https://m.media-amazon.com/images/I/71yir9yyAfL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="RSeat RS1">
+    <img class="product-image" src="https://hwimages.beslist.net/beslist-images/3NKhCQtZk8eRanazLjQXEFXAgxYg/394/F600/84ea216e31bd107ab93646aead906b8c/Computerspeakers/Edifier-R1100-pc-luidspreker.jpg" alt="Legion Laptop">
     <div class="product-details">
         <h2 class="product-name">Edifier R1280DB - Zwart</h2>
         <p class="product-price">€130,-</p>
         <p class="product-description">
 
-            De Edifier R1280DB in het zwart is een hoogwaardig 2.0 boekenplankluidsprekersysteem dat stijl en prestaties combineert voor een meeslepende luisterervaring. Met zijn strakke zwarte afwerking voegt dit luidsprekersysteem een vleugje elegantie toe aan elke ruimte.
+            De Edifier R1280DB in elegant zwart is een hoogwaardige boekenplankluidspreker die stijl combineert met uitstekende audioprestaties. Met een strak design en geavanceerde functies biedt deze luidspreker een indrukwekkende luisterervaring voor zowel muziekliefhebbers als audiofielen.
 
-            Met een krachtige 42 watt RMS-output levert de R1280DB indrukwekkend geluid, geschikt voor zowel entertainment als audiofiele luisterervaringen. Het systeem beschikt over Bluetooth-connectiviteit, waardoor draadloos streamen vanaf je favoriete apparaten eenvoudig wordt.
+            Het moderne zwarte ontwerp van de Edifier R1280DB voegt een vleugje verfijning toe aan elke kamer. Of het nu in een woonkamer, kantoor of slaapkamer is, de strakke lijnen en tijdloze kleur maken het een aanvulling op diverse interieurstijlen.
 
-            Dankzij de handige afstandsbediening kun je het volume aanpassen, nummers overslaan en de bron selecteren zonder op te staan. De luidsprekers hebben ook meerdere ingangen, waaronder twee RCA-ingangen en een optische ingang, waardoor je verschillende apparaten moeiteloos kunt aansluiten.
+            De luidsprekers leveren niet alleen op het gebied van esthetiek, maar ook op het gebied van geluidskwaliteit. Met een krachtig vermogen en geavanceerde audiotechnologieën zorgen de Edifier R1280DB-luidsprekers voor een helder en gebalanceerd geluid. Of u nu geniet van uw favoriete muziek, films bekijkt of games speelt, deze luidsprekers bieden een meeslepende luisterervaring.
 
-            De R1280DB is ontworpen met oog voor detail, met houten zijpanelen die niet alleen esthetisch aantrekkelijk zijn, maar ook bijdragen aan een verbeterde geluidskwaliteit. Kortom, de Edifier R1280DB in het zwart biedt een perfecte combinatie van stijl en prestaties voor de veeleisende audioliefhebber.
+            Dankzij de diverse aansluitingsmogelijkheden, waaronder Bluetooth, optische en RCA-ingangen, is de Edifier R1280DB veelzijdig en gemakkelijk te integreren in uw multimedia-opstelling. Bedieningselementen aan de zijkant van de luidspreker zorgen voor eenvoudige aanpassing van het volume, bas en treble.
+
+            De Edifier R1280DB in zwart is niet alleen een geluidsinvestering, maar ook een visuele aanvulling op uw ruimte. Ervaar de perfecte balans tussen esthetiek en audioprestaties met deze hoogwaardige boekenplankluidsprekers.
+
+
         </p>
         <label for="quantity">Aantal:</label>
         <select id="quantity" class="quantity-select">
@@ -137,6 +152,7 @@
             <option value="5">5</option>
         </select>
         <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+        <button class="remove-from-cart" onclick="removeFromCart()">Verwijder uit winkelwagen</button>
     </div>
 </div>
 
@@ -148,16 +164,54 @@
 </div>
 
 <script>
+    // Haal de bestaande winkelwagen op uit localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     let cartCount = 0;
 
     function addToCart() {
         const quantity = document.getElementById("quantity").value;
-        cartCount += parseInt(quantity);
+
+        // Voeg het geselecteerde product toe aan de winkelwagen
+        cart.push({
+            name: "Legion Laptop",
+            price: 1050,
+            quantity: parseInt(quantity)
+        });
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function removeFromCart() {
+        // Verwijder het product uit de winkelwagen
+        cart = [];
+
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Werk het winkelwagen-icoon bij
+        updateCartCount();
+    }
+
+    function updateCartCount() {
+        // Bereken het totaal aantal producten in de winkelwagen
+        cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+        // Update de weergave van het totaal aantal producten in de winkelwagen
         document.getElementById("cartCount").innerText = cartCount;
     }
+
+    // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+    updateCartCount();
 </script>
 </body>
 </html>
+
+
 
 
 
