@@ -1,0 +1,21 @@
+.navbar {
+    background-color: rgba(41, 0, 77);
+    color: #fff;
+    padding: 0em;
+    text-align: center;
+}
+
+.cover {
+    background-image: url('https://i.pinimg.com/originals/04/ce/ca/04ceca81d23af8d1c835d5bc625ff6f6.gif');
+    filter: brightness(100%);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ff1511;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 45px;
+    font-family: monospace;
+}
