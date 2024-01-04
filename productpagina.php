@@ -55,7 +55,7 @@ ORDER BY SUM(quantity) DESC";
                 <a class="nav-link" href="html/home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="html/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="html/contact.html"> Contact </a>
@@ -146,7 +146,7 @@ if ($result->num_rows > 0) {
                 <img src="productimages/'.$row["image"].'.jpg" class="card-img-top" alt="pc">
                 <div class="card-body">
                   <h5 class="card-title"> '.$row["name"]. ' </h5>
-                  <a href="http://localhost/KBSnerdygadgets/ptest.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
+                  <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"].'-</strong> </span>
                   <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
@@ -157,7 +157,9 @@ if ($result->num_rows > 0) {
             ';
     }
 } else {
-    echo "<br>No results found<br>";} ?>
+    echo "<br>No results found<br>";}
+$conn->close()
+?>
 
     </div>
 
