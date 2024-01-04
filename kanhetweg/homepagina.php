@@ -16,7 +16,7 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <a class="navbar-brand" href="home.html"></a>
+  <a class="navbar-brand" href="../html/home.html"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,16 +38,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="home.html"> Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../html/home.html"> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../productpagina.php"> Producten </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html"> Contact </a>
+        <a class="nav-link" href="../html/contact.html"> Contact </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+        <a class="nav-link" href="../html/shoppingcart.html"> Winkelwagen</a>
       </li>
     </ul>
   </div>
@@ -60,7 +60,7 @@
       <div class="col-md-12">
         <h1>Nerdy Gadgets</h1>
         <p>Unlock your inner geek.</p>
-        <a href="ourfavorite.html" class="btn btn-primary">Our favorite</a>
+        <a href="../html/ourfavorite.html" class="btn btn-primary">Our favorite</a>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
   <div class="maincards">
     <div class="cards">
       <div class="image">
-        <img src="Goedeimages/vr.png" alt="vr">
+        <img src="../html/Goedeimages/vr.png" alt="vr">
       </div>
       <div class="title">
         <h1>FutureGaze</h1>
@@ -84,7 +84,7 @@
 
     <div class="cards">
       <div class="image">
-        <img src="Goedeimages/pc.jpg" alt="pc">
+        <img src="../html/Goedeimages/pc.jpg" alt="pc">
       </div>
       <div class="title">
         <h1>Inferno X1</h1>
@@ -97,7 +97,7 @@
 
     <div class="cards">
       <div class="image">
-        <img src="Goedeimages/arcade.jpg" alt="arcade">
+        <img src="../html/Goedeimages/arcade.jpg" alt="arcade">
       </div>
       <div class="title">
         <h1>GameWave</h1>
@@ -120,12 +120,12 @@ Onze klanten gaan voor Nerdy Gadgets vanwege onze geweldige producten, kwaliteit
     <p>
 Sluit je vandaag aan bij onze tech community en ontdek waarom iedereen bij Nerdy Gadgets shopt voor hun gadgets.
     </p>
-    <a href="Reviews.html" class="button-link">Read our reviews</a>
+    <a href="../html/Reviews.html" class="button-link">Read our reviews</a>
   </div>
 
   <div class="cover4_right">
     <div class="card">
-      <img src="Goedeimages/usericon.jpg" alt="user"/>
+      <img src="../html/Goedeimages/usericon.jpg" alt="user"/>
       <div class="card__content">
         <span><i class="ri-double-quotes-l"></i></span>
         <div class="card__details">
@@ -137,7 +137,7 @@ Goede producten die niet teleurstellen!
       </div>
     </div>
     <div class="card">
-      <img src="Goedeimages/usericon.jpg" alt="user" />
+      <img src="../html/Goedeimages/usericon.jpg" alt="user" />
       <div class="card__content">
         <span><i class="ri-double-quotes-l"></i></span>
         <div class="card__details">
@@ -149,7 +149,7 @@ Veel keuze uit de leukste gadgets!
       </div>
     </div>
     <div class="card">
-      <img src="Goedeimages/usericon.jpg" alt="user" />
+      <img src="../html/Goedeimages/usericon.jpg" alt="user" />
       <div class="card__content">
         <span><i class="ri-double-quotes-l"></i></span>
         <div class="card__details">
@@ -203,7 +203,7 @@ Snelle levering. Had het 2 dagen na bestellen al binnen!
   <script src="../java/registratie.js"></script>
 
   <div class="container signin">
-    <p>Heb je al een account? <a href="Login.html">Log hier in!</a>.</p>
+    <p>Heb je al een account? <a href="registratie.html">Log hier in!</a>.</p>
   </div>
 </form>
 

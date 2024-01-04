@@ -42,9 +42,51 @@ if ($regis->execute()) {
 }
 $conn->close()
 ?>
-<form method="post" action="registratie.php">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nerdy Gadgets</title>
+    <meta charset="UTF-8">
+</head>
+<body style="background-color: #4b0082;">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/aanbevolen.css">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="home.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="home.html"> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../productpagina.php"> Producten </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-center">
+        <div style="background-color: #230536; color: #fff; padding: 20px; text-align: center;">
+            <h1 class="display-4">Registreren</h1>
+
+</div>
+<form method="post" action="regis.php">
   <div class="container1">
-    <h1>Registreer</h1>
+      <div style="background-color: #FFFFFF; color: #230536">
     <p>Vul uw gegevens in om een account aan te maken. Velden met een * zijn verplicht. </p>
     <hr>
               <label for="email"><b>E-mail*</b></label>
@@ -59,19 +101,19 @@ $conn->close()
               <label for="Achternaam"><b>Achternaam*</b></label>
               <input type="text" placeholder="Vul uw achternaam in" name="anaam" id="Achternaam" required>
 
-              <label for="Straatnaam"><b>Straatnaam</b></label>
+              <label for="Straatnaam"><b>Straatnaam*</b></label>
               <input type="text" placeholder="Bijv. computerstraat" name="straat" id="Straatnaam" required>
 
-              <label for="Huisnummer"><b>Huisnummer</b></label>
+              <label for="Huisnummer"><b>Huisnummer*</b></label>
               <input type="text" placeholder="Vul uw huisnummer in" name="huis" id="Huisnummer" required>
 
-              <label for="Postcode"><b>Postcode</b></label>
+              <label for="Postcode"><b>Postcode*</b></label>
               <input type="text" placeholder="zoals 1234AB" name="postcode" id="Postcode" maxlength="6" required>
 
-              <label for="Stad"><b>Stad</b></label>
+              <label for="Stad"><b>Stad*</b></label>
               <input type="text" placeholder="Voer uw stad in" name="stad" id="Stad" required>
 
-              <label for="psw"><b>Wachtwoord</b></label>
+              <label for="psw"><b>Wachtwoord*</b></label>
               <input type="password" placeholder="Voer Wachtwoord in" name="psw" id="psw" required>
 
               <hr>
@@ -81,6 +123,9 @@ $conn->close()
           </div>
 
           <div class="container signin">
-              <p>Heb je al een account? <a href="html/Login.html">Log hier in!</a>.</p>
+              <p>Heb je al een account? <a href="../kanhetweg/registratie.html">Log hier in!</a>.</p>
           </div>
       </form>
+</div>
+        </div>
+</body>

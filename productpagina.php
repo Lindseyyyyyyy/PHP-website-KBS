@@ -55,7 +55,7 @@ ORDER BY SUM(quantity) DESC";
                 <a class="nav-link" href="html/home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="html/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="html/contact.html"> Contact </a>
