@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSeat RS1 - Webshop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        header {
+            background-color: #8e44ad; /* Paarse achtergrond */
+            color: #f9ca24; /* Gele tekst */
+            text-align: center;
+            padding: 1em;
+        }
+
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #8e44ad; /* Paarse achtergrond */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details {
+            margin-top: 20px;
+        }
+
+        .product-name {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+            text-align: left;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .add-to-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .view-cart {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cart {
+            text-align: right;
+            margin-top: 10px;
+            color: #f9ca24; /* Gele tekst */
+        }
+
+        .cart-icon {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            background-color: #f9ca24; /* Gele achtergrond */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 1em;
+        }
+
+        .quantity-select {
+            font-size: 1em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>NerdyGadgets</h1>
+</header>
+
+<div class="product-container">
+    <img class="product-image" src="https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-81135169/fee_786_587_png" alt="RSeat RS1">
+    <div class="product-details">
+        <h2 class="product-name">Logitech G502 Lightspeed Wireless</h2>
+        <p class="product-price">€220.-</p>
+        <p class="product-description">
+
+            De Logitech G502 Lightspeed Wireless is een geavanceerde gamingmuis die draadloze vrijheid combineert met krachtige prestaties en aanpasbaarheid. Hier is een korte productbeschrijving:
+
+            De Logitech G502 Lightspeed Wireless gamingmuis biedt gamers de ultieme combinatie van precisie, snelheid en personalisatie. Dankzij de draadloze Lightspeed-technologie geniet je van de vrijheid van draadloos gamen zonder concessies te doen aan de prestaties.
+
+            Met het HERO-sensorplatform levert de G502 Lightspeed ongeëvenaarde nauwkeurigheid met instelbare gevoeligheid tot 16.000 DPI. Hierdoor is de muis geschikt voor zowel snelle bewegingen als precieze targeting, waardoor het een favoriet is onder gamers van verschillende genres.
+
+            De muis is ontworpen met comfort en duurzaamheid in gedachten. Het gestroomlijnde en ergonomische ontwerp past comfortabel in de hand, zelfs tijdens lange gamingsessies. De zijknoppen en het Infinite Scroll Wheel bieden extra functionaliteit en aanpasbaarheid, zodat je snel toegang hebt tot belangrijke commando's.
+
+            Dankzij de Lightsync RGB-verlichting kun je de muis aanpassen met een spectrum van 16,8 miljoen kleuren, waardoor je jouw gamingopstelling een persoonlijk tintje geeft. Bovendien biedt de optionele Powerplay-oplaadtechnologie de mogelijkheid om draadloos op te laden terwijl je speelt, waardoor je nooit zonder stroom komt te zitten.
+
+            Of je nu een competitieve gamer bent die streeft naar topprestaties of een enthousiaste speler die op zoek is naar een veelzijdige en aanpasbare gamingmuis, de Logitech G502 Lightspeed Wireless biedt een indrukwekkende combinatie van draadloze vrijheid, nauwkeurigheid en ergonomisch comfort. Upgrade je game-ervaring met deze geavanceerde gamingmuis.
+
+
+
+
+
+
+        </p>
+        <label for="quantity">Aantal:</label>
+        <select id="quantity" class="quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+    </div>
+</div>
+
+<div class="cart">
+    <a class="view-cart" href="winkelwagen.html">
+        <span class="cart-icon">&#128722;</span>
+        Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        const quantity = document.getElementById("quantity").value;
+        cartCount += parseInt(quantity);
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+</script>
+</body>
+</html>

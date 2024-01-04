@@ -1,0 +1,413 @@
+/*Sectie homepage aanbevolen producten*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gili sans', sans-serif;
+}
+
+#logoContainer {
+    position: relative;
+}
+
+#hiddenContent {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a317aa;
+    padding: 20px;
+    border: 2px solid #060ebb;
+}
+
+#hiddenContent p {
+    color: deeppink;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.maincards {
+    /*margin: 3.3% 0 100px;*/
+    /*outline-color: #daa671;*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 500px) and (max-width: 1199px) {
+    .maincards {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .maincards {
+        display: flex;
+        gap: 40px;
+        flex-direction: unset;
+    }
+}
+
+.cards {
+    /*width: 27%;*/
+    /*display: inline-block;*/
+
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    /*margin: 2.7%;*/
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+
+}
+
+.title{
+    text-align: center;
+    margin-top: 30px;
+    color: #d08c49;
+}
+
+.cards h1 {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: bold;
+    color: #b4a7be;
+}
+
+.des {
+    padding: 3px;
+    font-size: 19px;
+    line-height: 2.0;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #c1b4c9;
+    font-family: Garamond, serif;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #4b0082;
+    border: 1px solid #c1b4c9;
+    padding: 5px;
+    cursor: pointer;
+    color: #c1b4c9;
+}
+button:hover {
+    background-color: #100033;
+    color: white;
+    transition: .5s;
+}
+
+
+/* Klantenreviews sectie*/
+
+
+:root{
+   --primary-color: #ff226f;
+    --primary-color-dark: #fe6769;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.cover4 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+    color: #c1b4c9;
+}
+.cover4_left h1 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #c1b4c9;
+}
+
+.cover4_left p {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-size: 1.29rem;
+
+}
+
+.cover4_left button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+            to right,
+            #76428a,
+            #b4a7be
+    );
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cover4_right {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 75px;
+    border-radius: 100%;
+}
+
+.card__content {
+    display: flex;
+    gap: 1rem;
+}
+
+.card__content span i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.card__details p {
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.card__details h4 {
+    text-align: right;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (width < 1200px) {
+    .cover4 {
+        gap: 3rem;
+    }
+}
+
+@media (width < 900px) {
+    .cover4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cover4__right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 750px) {
+    .cover4__right {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.cover {
+    background-image: url('https://media.tenor.com/Eg0O0y22HOcAAAAC/cyberpunk.gif');
+    filter: brightness(65%);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Define a custom CSS class for the button */
+.btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: none; /* Remove the underline from the link */
+}
+.cover h1 {
+    font-size: 8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cover p {
+    font-size: 4em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.cover2 p {
+    font-family: 'Montserrat';
+    margin: 20px 0;
+    font-size: 1.3em;
+    margin-left: 0;
+}
+
+/* Custom CSS for transparent navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust the alpha value for transparency */
+}
+
+/*banner*/
+body {
+    background-color: #f8fafc;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container1 {
+    padding: 16px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #4b0082;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #4b0082;
+    text-align: center;
+    color: white;
+}
+
+
+

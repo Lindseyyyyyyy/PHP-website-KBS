@@ -1,0 +1,17 @@
+.navbar {
+    background-color: rgba(41, 0, 77);
+}
+
+.footer {
+    background-color: #230536;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Achtergrondkleur */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #230536;
+}

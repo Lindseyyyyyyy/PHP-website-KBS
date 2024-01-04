@@ -1,0 +1,10 @@
+.falling-letters {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.falling-letters span {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
