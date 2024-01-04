@@ -38,30 +38,30 @@ ORDER BY SUM(quantity) DESC";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Nerdy Gadgets</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="../css/products.css">
 
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="html/home.html">Nerdy Gadgets</a>
+    <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="html/home.html"> Home </a>
+                <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="html/contact.html"> Contact </a>
+                <a class="nav-link" href="contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="html/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -148,8 +148,8 @@ if ($result->num_rows > 0) {
                   <h5 class="card-title"> '.$row["name"]. ' </h5>
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
-                  <span class="product-price"> <strong>'."€". $row["price"].'-</strong> </span>
-                  <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <span class="product-price"> <strong>'."€". $row["price"]. '-</strong> </span>
+                  <a href="shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 

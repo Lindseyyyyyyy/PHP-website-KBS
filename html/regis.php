@@ -65,7 +65,7 @@ $conn->close()
                 <a class="nav-link" href="home.html"> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../productpagina.php"> Producten </a>
+                <a class="nav-link" href="productpagina.php"> Producten </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contact.html"> Contact </a>
@@ -123,7 +123,7 @@ $conn->close()
           </div>
 
           <div class="container signin">
-              <p>Heb je al een account? <a href="../kanhetweg/registratie.html">Log hier in!</a>.</p>
+              <p>Heb je al een account? <a href="inlogversie.html">Log hier in!</a>.</p>
           </div>
       </form>
 </div>
