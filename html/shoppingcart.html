@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
                 <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="producten.html"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contact.html"> Contact </a>
@@ -33,7 +33,7 @@
     </div>
 </nav>
 
-
+<body>
 <header>
     <h1>Winkelwagen</h1>
 </header>
@@ -55,14 +55,22 @@
     <!-- Voeg meer producten toe zoals nodig -->
 </section>
 
-</div>
-    <!-- Winkelwageninhoud -->
-<section id="cart">
-    <h2>Winkelwagen</h2>
-    <ul id="cart-items"></ul>
-    <button id="checkout-btn">Afrekenen</button>
-</section>
-<script src="../java/shoppingcart.js"></script>
+    <div id="coupon-section">
+        <label for="coupon-input">Couponcode:</label>
+        <input type="text" id="coupon-input" placeholder="Voer je couponcode in">
 
-</body>
+        <button id="apply-coupon-btn">Toepassen</button>
+    </div>
+
+    <div id="total-section">
+        <p>Subtotaal: $30</p>
+        <p>Korting: $0</p>
+        <p>Totaal: $30</p>
+    </div>
+
+    <!-- betaalpagina link -->
+    <a href="betalen.html" class="btn btn-primary float-right">Bestellen!</a>
+
+
+ </body>
 </html>
