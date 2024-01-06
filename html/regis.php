@@ -13,34 +13,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $ww = $_POST['psw'];
-    $vnaam = $_POST['vnaam'];
-    $tussen = $_POST['tussen'];
-    $anaam = $_POST['anaam'];
-    $straat = $_POST['straat'];
-    $huis = $_POST['huis'];
-    $postcode = $_POST['postcode'];
-    $stad = $_POST['stad'];
-
-if (empty($email) || empty($ww) || empty($vnaam) || empty($anaam) || empty($straat) || empty($huis) || empty($postcode) || empty($stad)) {
-    echo "Please fill in all required fields.";
-} else {
-    $regis = $conn->prepare("INSERT INTO user (email, password, first_name, surname_prefix, surname, street_name, apartment_nr, postal_code, city) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $regis->bind_param("ssssssiss", $email, $ww, $vnaam, $tussen, $anaam, $straat, $huis, $postcode, $stad);
-}
-if ($regis->execute()) {
-            echo "Welkom meneer, uw account is succesvol aangemaakt";
-        } else {
-            echo "Er ging helaas iets mis. Error: " . $regis->error;
-        }
-
-        $regis->close();
-}
-$conn->close()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,23 +43,49 @@ $conn->close()
                 <a class="nav-link" href="contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
             </li>
         </ul>
     </div>
-
 </nav>
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center">
         <div style="background-color: #230536; color: #fff; padding: 20px; text-align: center;">
             <h1 class="display-4">Registreren</h1>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email = $_POST['email'];
+            $ww = $_POST['psw'];
+            $vnaam = $_POST['vnaam'];
+            $tussen = $_POST['tussen'];
+            $anaam = $_POST['anaam'];
+            $straat = $_POST['straat'];
+            $huis = $_POST['huis'];
+            $postcode = $_POST['postcode'];
+            $stad = $_POST['stad'];
 
+            if (empty($email) || empty($ww) || empty($vnaam) || empty($anaam) || empty($straat) || empty($huis) || empty($postcode) || empty($stad)) {
+            echo "Please fill in all required fields.";
+            } else {
+            $regis = $conn->prepare("INSERT INTO user (email, password, first_name, surname_prefix, surname, street_name, apartment_nr, postal_code, city) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $regis->bind_param("ssssssiss", $email, $ww, $vnaam, $tussen, $anaam, $straat, $huis, $postcode, $stad);
+            }
+            if ($regis->execute()) {
+            echo "Welkom!, uw account is succesvol aangemaakt";
+            } else {
+            echo "Er ging helaas iets mis. Error: " . $regis->error;
+            }
+
+            $regis->close();
+            }
+            $conn->close(); ?>
 </div>
 <form method="post" action="regis.php">
   <div class="container1">
       <div style="background-color: #FFFFFF; color: #230536">
     <p>Vul uw gegevens in om een account aan te maken. Velden met een * zijn verplicht. </p>
+
     <hr>
               <label for="email"><b>E-mail*</b></label>
               <input type="text" placeholder="Bijv. nerdygadgetklant@hotmail.com" name="email" id="email" required >
@@ -129,3 +127,9 @@ $conn->close()
 </div>
         </div>
 </body>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2023 Nerdy Gadgets</p>
+    </div>
+</footer>

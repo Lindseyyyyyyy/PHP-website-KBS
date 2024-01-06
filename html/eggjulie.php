@@ -26,7 +26,7 @@
                 <a class="nav-link" href="contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -62,7 +62,8 @@
             </div>
             <script>
                 document.getElementById('easterEggImage').addEventListener('click', function() {
-                    // Show the message
+
+
                     document.getElementById('easterEggMessage').style.display = 'block';
                 });
 
@@ -76,7 +77,6 @@
                     document.execCommand('copy');
                     document.body.removeChild(textArea);
 
-                    // Inform the user that the code is copied
                     alert('Code copied to clipboard!');
                 });
             </script>

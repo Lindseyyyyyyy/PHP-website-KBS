@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
                 <a class="nav-link" href="html/contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="html/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="kanhetweg/shoppingcart.html"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -48,16 +48,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+include 'functions.php';
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $id = isset($_GET['id']) ? $_GET['id'] : '';
+$bericht = isset($_GET['bericht']) ? $_GET['bericht']: '';
 
 $query = "SELECT * FROM product WHERE id = $id ";
-
-
-
-
 $result = $conn->query($query);
 $row = $result->fetch_assoc();
-
 
 if ($result->num_rows > 0) {
     echo " <html> <div class='jumbotron jumbotron-fluid'>
@@ -67,8 +68,11 @@ if ($result->num_rows > 0) {
             <img src='productimages/".$row["image"].".jpg' alt='image'>
             <div class='container text-left'>
                 <div style='background-color: #fff; color: #230536; padding: 20px; text-align: center;'>" . $row["description"]."
-                <br><div class='container-sm' > <div style='color: #000000; font-weight: bold; font-style: oblique; background-color: #FFFFFF; font-size: large'> ". $row["price"]. " euro </div></div>";
+                <br><div class='container-sm' > <div style='color: #000000; font-weight: normal; font-style: oblique; background-color: #FFFFFF; font-size: large'> ". $row["price"]. " euro 
+                </div></div>";
+
 }
+
 $soort = $row["category"];
 $huidig = $row["name"];
 
@@ -81,9 +85,20 @@ ORDER BY SUM(quantity) DESC; " ;
 
 $aanbevolen = $conn->query($category);
 $rij = $aanbevolen->fetch_assoc();
+
+
 ?>
 
-<section class="container my-5">
+<form method='post' action='functietest.php'>
+<input type='number' name='quantity' id='quantity' min='1' max='15' value='1'> aantal
+    <input type='hidden' name='id' value='<?php echo $id; ?>'>
+<input type='submit' value='toevoegen aan winkelwagen'>
+
+    <?php if (!empty($bericht)) {
+        echo "<br><div class='container-sm' > <div style='color: #000000; font-weight: bold; font-style: oblique; background-color: #FFFFFF; font-size: large'>".$bericht." </div></div>";
+    }?>
+
+</form><section class="container my-5">
     <h5 class="card-title"> aanbevolen producten </h5><br>
     <div class="row mb-4">
 
@@ -99,8 +114,8 @@ if ($result->num_rows > 0) {
                   <h5 class="card-title"> '.$rij["name"]. ' </h5>
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$rij["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($rij["description"],0,50)."...".'</p>
-                  <span class="product-price"> <strong>'."€". $rij["price"]. '-</strong> </span>
-                  <a href="html/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <span class="product-price"> <strong>'."€". $rij["price"]. '-</strong> </span>               
+                  <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$rij["id"].'"> toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 
@@ -121,7 +136,7 @@ if ($result->num_rows > 0) {
                 <a href="html/eggjulie.php"> klik hier om naar de productpagina te gaan </a>
                 <p class="card-text"> jouw favoriete gadget </p>
                 <span class="product-price"> <strong> $0,- </strong> </span>
-                <a href="#" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                <a href="html/eggjulie.php" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
             </div>
         </div>
     </div>
