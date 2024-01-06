@@ -1,0 +1,14 @@
+.slider-wrapper {
+    width: 100%; /* Ensure the wrapper takes up 100% of the width */
+    overflow: hidden; /* Hide any overflow to prevent horizontal scrollbars */
+}
+
+.slider {
+    display: flex; /* Use flexbox to arrange the images horizontally */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+
+.slider img {
+    width: 100%; /* Make the images take up 100% of their container width */
+    height: auto; /* Maintain the aspect ratio */
+}

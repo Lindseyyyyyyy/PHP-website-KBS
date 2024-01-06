@@ -62,6 +62,9 @@ $mostOrderedProductName5 = $row['name'];
 $mostOrderedProductImage5 = $row['image'];
 $mostOrderedProductOrders5 = $row['aantal_bestellingen'];
 
+
+
+
 // Sluit de databaseverbinding
 $conn->close();
 
