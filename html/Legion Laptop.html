@@ -207,7 +207,46 @@
 
     // Laad het aantal producten in de winkelwagen bij het laden van de pagina
     updateCartCount();
+    <!-- ... (huidige code blijft ongewijzigd) ... -->
+
+        // De eerder gegeven code voor de winkelwagenfunctionaliteit blijft hier ongewijzigd.
+
+    <!-- ... (huidige code blijft ongewijzigd) ... -->
+
+
+        // De eerder gegeven code voor de winkelwagenfunctionaliteit blijft hier ongewijzigd.
+
+        let spacebarCount = 0;
+
+        function checkSpacebar(event) {
+        if (event.code === 'Space') {
+        spacebarCount++;
+        if (spacebarCount === 2) {
+        activateEasterEgg();
+        spacebarCount = 0; // reset count for potential future activations
+    }
+    } else {
+        spacebarCount = 0; // reset count if another key is pressed
+    }
+    }
+
+        function activateEasterEgg() {
+        const discountCode = generateDiscountCode(); // Functie om een willekeurige kortingscode te genereren
+        alert(`Gefeliciteerd! Je hebt een kortingscode gewonnen: ${discountCode}`);
+    }
+
+        function generateDiscountCode() {
+        // Hier kun je logica toevoegen om een willekeurige kortingscode te genereren.
+        // Voor dit voorbeeld genereren we een eenvoudige code van 6 tekens.
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let discountCode = '';
+        for (let i = 0; i < 6; i++) {
+        discountCode += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+        return discountCode;
+    }
+
+        document.addEventListener('keydown', checkSpacebar);
 </script>
 </body>
 </html>
-

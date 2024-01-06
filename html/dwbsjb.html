@@ -60,8 +60,7 @@
     function updateQuantity(productName, productPrice, newQuantity) {
         const product = cart.find(item => item.name === productName);
         const oldQuantity = product.quantity;
-        const adjustedQuantity = Math.max(parseInt(newQuantity), 1); // Ensure the quantity is at least 1
-        product.quantity = adjustedQuantity;
+        product.quantity = parseInt(newQuantity);
 
         // Sla de bijgewerkte winkelwagen op in localStorage
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -70,29 +69,21 @@
         updateCartItems();
 
         // Update de totaalprijs na wijzigen van de hoeveelheid
-        updateTotalPrice(productPrice * (adjustedQuantity - oldQuantity));
+        updateTotalPrice(productPrice * (parseInt(newQuantity) - oldQuantity));
     }
 
     function removeFromCart(productName, productPrice, productQuantity) {
-        // Zoek het geselecteerde product in de winkelwagen
-        const itemIndex = cart.findIndex(item => item.name === productName && item.quantity === productQuantity);
-
         // Verwijder het geselecteerde product uit de winkelwagen
-        if (itemIndex !== -1) {
-            // Update de totaalprijs na verwijderen van het product
-            const removedPrice = cart[itemIndex].price * cart[itemIndex].quantity;
+        cart = cart.filter(item => !(item.name === productName && item.quantity === productQuantity));
 
-            cart.splice(itemIndex, 1);
+        // Sla de bijgewerkte winkelwagen op in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
 
-            // Sla de bijgewerkte winkelwagen op in localStorage
-            localStorage.setItem("cart", JSON.stringify(cart));
+        // Update de weergave van de producten in de winkelwagen
+        updateCartItems();
 
-            // Update de weergave van de producten in de winkelwagen
-            updateCartItems();
-
-            // Update de totaalprijs na verwijderen van het product
-            updateTotalPrice(-removedPrice);
-        }
+        // Update de totaalprijs na verwijderen van het product
+        updateTotalPrice(-productPrice * productQuantity);
     }
 
     function updateCartTotal() {
@@ -106,8 +97,8 @@
 
     function updateTotalPrice(amount) {
         const totalPriceElement = document.getElementById("totalPrice");
-        const currentTotalPrice = parseFloat(totalPriceElement.innerText.split("€")[1].replace(",-", "")) || 0;
-        const newTotalPrice = Math.max(currentTotalPrice + amount, 0); // Ensure the total price is at least 0
+        const currentTotalPrice = parseFloat(totalPriceElement.innerText.split("€")[1].replace(",-", ""));
+        const newTotalPrice = currentTotalPrice + amount;
         totalPriceElement.innerText = `Totaalprijs: €${newTotalPrice.toFixed(2)},-`;
     }
 
@@ -118,3 +109,4 @@
 </script>
 </body>
 </html>
+
