@@ -6,9 +6,10 @@
     }
 
 body {
-    background-image: url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif');
+    background-color: rgba(41, 0, 77);
     background-size: cover;
 }
+/*image: url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif')*/
 .footer {
     background-color: #230536;
     color: #fff;
@@ -32,7 +33,7 @@ header {
 }
 
 .container {
-    max-width: 1200px; /* Kies je gewenste maximale breedte */
+    max-width: 1600px; /* Kies je gewenste maximale breedte */
     margin: 0 auto; /* Centreer de container op de pagina */
     padding: 20px; /* Voeg eventuele padding toe naar wens */
     color: #cccccc;
@@ -63,14 +64,18 @@ section {
     margin-bottom: 5px;
 }
 
-#checkout-btn {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
+.float-right {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
 }
 
-#checkout-btn:hover {
-    background-color: #45a049;
+
+#coupon-section {
+    margin-top: 20px;
+}
+
+#total-section {
+    margin-top: 20px;
+    float: left;
 }

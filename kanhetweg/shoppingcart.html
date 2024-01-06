@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,20 +11,20 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="home.html"><img src="../Goedeimages/LogoNG.png" alt="Logo" height="70" width="90"></a>
+    <a class="navbar-brand" href="../html/home.html"><img src="../Goedeimages/LogoNG.png" alt="Logo" height="70" width="90"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home.html"> Home </a>
+                <a class="nav-link" href="../html/home.html"> Home </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="producten.html"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html"> Contact </a>
+                <a class="nav-link" href="../html/contact.html"> Contact </a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
@@ -43,7 +43,7 @@
     <!-- Productenlijst -->
     <div class="product" data-product-id="1">
         <h2>LG 40WP95CP-W - 39.7'' Gebogen UltraWide 5K2K Nano IPS Scherm: Een Venster naar de Toekomst van Beeldkwaliteit</h2>
-        <p>Beschrijving van Product 1.</p>
+        <p>aantal = 1.</p>
         <button class="add-to-cart">Toevoegen aan winkelwagen</button>
     </div>
 
@@ -55,13 +55,23 @@
     <!-- Voeg meer producten toe zoals nodig -->
 </section>
 
+    <div id="coupon-section">
+        <label for="coupon-input">Couponcode:</label>
+        <input type="text" id="coupon-input" placeholder="Voer je couponcode in">
 
-    <!-- Winkelwageninhoud -->
-<section id="cart">
-    <h2>Winkelwagen</h2>
-    <ul id="cart-items"></ul>
-    <button id="checkout-btn">Afrekenen</button>
-</section>
-<script src="../java/shoppingcart.js"></script>
+        <button id="apply-coupon-btn">Toepassen</button>
+    </div>
+
+    <div id="total-section">
+        <p>Subtotaal: $30</p>
+        <p>Korting: $0</p>
+        <p>Totaal: $30</p>
+    </div>
+
+    <!-- betaalpagina link -->
+    <a href="../html/betalen.html" class="btn btn-primary float-right">Bestellen!</a>
+
+</div>
 </body>
+ </body>
 </html>
