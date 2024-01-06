@@ -26,5 +26,6 @@ function toevoegen($order,$product,$aantal)
     }
 }
 
+
 ?>
 

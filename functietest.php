@@ -14,21 +14,25 @@ if ($conn->connect_error) {
 include 'functions.php';
 $orderid = 600;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $productid = 9;
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $productid = $_POST["id"];
     $quantity = $_POST["quantity"];
     echo $orderid ." ". $productid ." ". $quantity;
-if (toevoegen($orderid,$productid,$quantity)){
-    echo " product toegevoegd aan winkelwagen";
-}else {
-    echo "er ging iets mis :(";
-}
+
+    if (toevoegen($orderid,$productid,$quantity)){
+       $bericht = " product is toegevoegd aan winkelwagen";
+    }else {
+        $bericht = "er ging iets mis :(";
+    }
+
+    if (isset($bericht)) {
+        header("Location: pdetail.php?id=$productid&bericht=$bericht");
+    } else {
+        header("Location: pdetail.php?id=$productid");
+    }
+    exit();
 }
 ?>
 
-<form method='post' action='functietest.php'>
-    <input type='number' name='quantity' id='quantity' min='1' value='1'> aantal
-    <input type='submit' value='toevoegen aan winkelwagen'>
 
-</form> </div></div>";
 

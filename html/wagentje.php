@@ -22,6 +22,7 @@ join orders as O on I.order_id = O.id
 join user as U on O.user_id = U.id
 Where order_id = $gebruiker";
 
+
 $naam = "select U.first_name as 'voornaam'
 from order_item as I 
 join orders as O on I.order_id = O.id
@@ -37,7 +38,7 @@ Where order_id = $gebruiker";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Winkelwagen</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/shoppingcartpage.css">
+    <link rel="stylesheet" href="/css/shoppingcartpage.css">
 </head>
 <body>
 
@@ -53,13 +54,13 @@ Where order_id = $gebruiker";
                 <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="contact.html"> Contact </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="wagentje.php"> Winkelwagen</a>
             </li>
         </ul>
     </div>
