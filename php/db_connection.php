@@ -1,8 +1,7 @@
 <?php
-
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "Lovinadolfijn123!@";
 $database = "nerdy_gadgets";
 
 $conn = mysqli_connect($host, $username, $password, $database);
@@ -14,3 +13,4 @@ if (!$conn) {
 }
 
 mysqli_close($conn);
+?>

@@ -164,23 +164,30 @@
   </div>
 </section>
 
+
  <!-- banner -->
 <section class="container">
   <div class="slider-wrapper">
     <div class="slider">
-      <img id="slide-1" src="https://img.freepik.com/free-photo/electronic-device-balancing-concept_23-2150422322.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699833600&semt=ais" alt="product 1" />
-      <img id="slide-2" src="https://img.freepik.com/premium-photo/glowing-headphone-neon-dark-background-ai-generated_99418-1352.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699574400&semt=ais" alt="product 2" />
-      <img id="slide-3" src="https://img1.cgtrader.com/items/2862357/bf2fa5c258/large/dualsense-controller-matte-black-ps5-3d-model-bf2fa5c258.jpg" alt="product 3" />
+      <img id="slide-1" src="productimages/<?php echo $mostOrderedProductImage; ?>.jpg" alt="<?php echo $mostOrderedProductName; ?>" />
+      <img id="slide-2" src="productimages/<?php echo $mostOrderedProductImage2; ?>.jpg" alt="<?php echo $mostOrderedProductName2; ?>" />
+      <img id="slide-3" src="productimages/<?php echo $mostOrderedProductImage3; ?>.jpg" alt="<?php echo $mostOrderedProductName3; ?>" />
+      <img id="slide-4" src="productimages/<?php echo $mostOrderedProductImage4; ?>.jpg" alt="<?php echo $mostOrderedProductName4; ?>" />
+      <img id="slide-5" src="productimages/<?php echo $mostOrderedProductImage5; ?>.jpg" alt="<?php echo $mostOrderedProductName5; ?>" />
     </div>
     <div class="slider-nav">
       <a href="#slide-1"></a>
       <a href="#slide-2"></a>
       <a href="#slide-3"></a>
+      <a href="#slide-4"></a>
+      <a href="#slide-5"></a>
       <script src="../java/banner.js"></script>
     </div>
   </div>
 </section>
 
+<!-- link met aanbevolen producten php -->
+<iframe src="../php/aanbevolen.php" width="600" height="400" frameborder="0"></iframe>
 
 
 <!-- Bootstrap Scripts -->

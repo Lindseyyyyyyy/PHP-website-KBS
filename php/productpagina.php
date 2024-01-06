@@ -64,7 +64,7 @@ $result = $conn->query($query);
             <div class="container text-left">
                 <div style="background-color: #230536; color: #fff; padding: 20px; text-align: left;">
                     <p class="lead">productfilters.</p>
-            <form action="verwerkenfilterinfo.php" method="post">
+            <form>
               categorie: <input type="checkbox" name="productsoort" value= "laptops" > laptops
               <input type="checkbox" name="productsoort" value="phones" > phones
                 <input type="checkbox" name="productsoort" value="opslag"> opslag
