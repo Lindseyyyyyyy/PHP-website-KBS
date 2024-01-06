@@ -78,7 +78,7 @@
       </div>
       <div class="des">
         <p>FutureGaze, de ultieme VR-bril voor avonturiers <br> en gamers, biedt hyperrealistische virtuele werelden en meeslepende ervaringen.Ontsnap aan de alledaagse <br>sleur en beleef spannende avonturen. Stap in de <br>toekomst en laat je dromen uitkomen!</p>
-        <a href="FuturegazeHome.html" class="read-more-button">Read More</a>
+        <a href="../html/FuturegazeHome.html" class="read-more-button">Read More</a>
       </div>
     </div>
 
@@ -91,7 +91,7 @@
       </div>
       <div class="des">
         <p>"Ontdek 'Inferno X1' voor de ultieme <br> gamingervaring. Met krachtige hardware, verbluffende <br>graphics en meeslepend geluid. Bereid je voor op <br>meeslepende avonturen en competitieve overwinningen. Upgrade je gaming met 'Inferno X1'!"</p>
-        <a href="InfernoHome.html" class="read-more-button">Read More</a>
+        <a href="../html/InfernoHome.html" class="read-more-button">Read More</a>
       </div>
     </div>
 
@@ -104,7 +104,7 @@
       </div>
       <div class="des">
         <p>GameWave tilt gaming naar een hoger niveau met arcade machines voor gamers van alle niveaus. <br>Beleef klassieke en moderne games met verbluffende <br>graphics en meeslepend geluid. Ontdek een wereld van onbegrensd gaming-plezier!</p>
-        <a href="GameWaveHome.html" class="read-more-button">Read More</a>
+        <a href="../html/GameWaveHome.html" class="read-more-button">Read More</a>
       </div>
     </div>
   </div>
