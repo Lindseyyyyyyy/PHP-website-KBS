@@ -125,7 +125,7 @@ if ($result->num_rows > 0) {
                 <a href="html/eggjulie.php"> klik hier om naar de productpagina te gaan </a>
                 <p class="card-text"> jouw favoriete gadget </p>
                 <span class="product-price"> <strong> $0,- </strong> </span>
-                <a href="#" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                <a href="html/eggjulie.php" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
             </div>
         </div>
     </div>
