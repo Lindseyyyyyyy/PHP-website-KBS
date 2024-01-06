@@ -65,14 +65,9 @@ Where order_id = $gebruiker";
     </div>
 </nav>
 
-<?php
-        $printnaam = $conn->query($naam);
+<div class="container">
+        <h2 class="cart-header" style="color: #FFFFFF; position: relative" size="relative"></h2> winkelwagen
 
-if ($printnaam->num_rows > 0){
-$hallo = $printnaam->fetch_assoc();
-    echo "winkelwagen van " . $hallo["voornaam"];
-} else
-    echo "gast winkelwagen" ?>
 
 <div class="container">
     <section id="products">
@@ -97,10 +92,10 @@ if ($result->num_rows > 0) {
     </section>
 
     <div id="coupon-section">
-        <form method="get"; action="wagentje.php">
+        <form method="get" action="wagentje.php">
         <label for="coupon-input">Couponcode:</label>
         <input type="text" id="coupon-input" name="coupon" placeholder="Voer je couponcode in">
-        <input type="submit"; value="toepassen" </input>
+        <input type="submit" value="toepassen">
         </form>
         <?php $korting = FALSE;
         if(isset($_GET["coupon"]) == "EASTEREGG17"){
@@ -118,20 +113,15 @@ if ($result->num_rows > 0) {
             $egg = $p * 0.1;}
             echo $egg. " euro";
           ?></p>
-        <p>Totaal: <?php echo $p - $egg. " euro"?></p>
+        <p>Totaal: <?php echo $p - $egg. " euro"?></p> <br>
+        <a href="html/betalen.html" class="btn btn-primary float-right">Bestellen!</a>
     </div>
 
     <!-- betaalpagina link -->
-    <a href="html/betalen.html" class="btn btn-primary float-right">Bestellen!</a>
 
 </div>
-</body>
-</body>
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2023 Nerdy Gadgets</p>
     </div>
-</footer>
+</body>
 </html>
 
 <?php $conn->close(); ?>
