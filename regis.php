@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 <body style="background-color: #4b0082;">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/aanbevolen.css">
+<link rel="stylesheet" href="css/aanbevolen.css">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -40,10 +40,10 @@ if ($conn->connect_error) {
                 <a class="nav-link" href="productpagina.php"> Producten </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html"> Contact </a>
+                <a class="nav-link" href="html/contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="wagentje.php"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -121,7 +121,7 @@ if ($conn->connect_error) {
           </div>
 
           <div class="container signin">
-              <p>Heb je al een account? <a href="inlogversie.html">Log hier in!</a>.</p>
+              <p>Heb je al een account? <a href="php/inloggen.php">Log hier in!</a>.</p>
           </div>
       </form>
 </div>

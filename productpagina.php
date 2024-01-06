@@ -38,7 +38,7 @@ ORDER BY SUM(quantity) DESC";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Nerdy Gadgets</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="css/products.css">
 
 </head>
 <body>
@@ -55,13 +55,13 @@ ORDER BY SUM(quantity) DESC";
                 <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="../kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html"> Contact </a>
+                <a class="nav-link" href="html/contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="wagentje.php"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -80,18 +80,6 @@ ORDER BY SUM(quantity) DESC";
                     <p class="lead">productfilters.</p>
                     <form>
                         <form method="GET" action="productpagina.php">
-                            categorie: <input type="checkbox" name="productsoort" value= "laptops" > laptops
-                            <input type="checkbox" name="productsoort" value="phones" > phones
-                            <input type="checkbox" name="productsoort" value="opslag"> opslag
-                            <input type="checkbox" name="productsoort" value="routers"> routers
-                            <input type="checkbox" name="productsoort" value="componenten"> componenten
-                            <input type="checkbox" name="productsoort" value="desktops"> desktops
-                            <br>
-                            prijs: <input type="checkbox" name="prijsklasse" value="laag" > tot 100
-                            <input type="checkbox" name="prijsklasse" value="midden" > 100 tot 250
-                            <input type="checkbox" name="prijsklasse" value="hoog" > boven de 250
-                            <br>
-
                             producten sorteren op: <select name="sort" id="sorteren" >
                                 <option value="cat">categorie</option>
                                 <option value="lprijs">prijs van laag naar hoog</option>
@@ -149,7 +137,7 @@ if ($result->num_rows > 0) {
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"]. '-</strong> </span>
-                  <a href="../kanhetweg/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <a href="kanhetweg/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 

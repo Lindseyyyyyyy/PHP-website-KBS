@@ -17,16 +17,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="html/home.html"> Home </a>
+                <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="html/contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="kanhetweg/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="wagentje.php"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -89,7 +89,7 @@ $rij = $aanbevolen->fetch_assoc();
 
 ?>
 
-<form method='post' action='functietest.php'>
+<form method='post' action='submitform.php'>
 <input type='number' name='quantity' id='quantity' min='1' max='15' value='1'> aantal
     <input type='hidden' name='id' value='<?php echo $id; ?>'>
 <input type='submit' value='toevoegen aan winkelwagen'>
@@ -133,10 +133,10 @@ if ($result->num_rows > 0) {
             <img src="img/easteregg.webp" class="card-img-top" alt="pc">
             <div class="card-body">
                 <h5 class="card-title"> supercoolerozecomputer 2.596 </h5>
-                <a href="html/eggjulie.php"> klik hier om naar de productpagina te gaan </a>
+                <a href="eggjulie.php"> klik hier om naar de productpagina te gaan </a>
                 <p class="card-text"> jouw favoriete gadget </p>
                 <span class="product-price"> <strong> $0,- </strong> </span>
-                <a href="html/eggjulie.php" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                <a href="eggjulie.php" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
             </div>
         </div>
     </div>
