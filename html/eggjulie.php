@@ -35,8 +35,6 @@
 
 <section class="container my-5">
 
-    <h5 class="card-title"> easter egg titel </h5> <br>
-
     <div>
         <div class="card" >
             <img src="../img/rozegift.webp" alt="Easter Egg Image" id="easterEggImage">
