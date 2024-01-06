@@ -13,7 +13,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$gebruiker = 600;
+$gebruiker = 53;
 
 $order = "select I.order_id, I.product_id,P.id, I.quantity, P.name, P.price
 from product as P
@@ -65,17 +65,14 @@ Where order_id = $gebruiker";
     </div>
 </nav>
 
-<body>
-<header>
-    <h1><?php
+<?php
         $printnaam = $conn->query($naam);
 
 if ($printnaam->num_rows > 0){
 $hallo = $printnaam->fetch_assoc();
     echo "winkelwagen van " . $hallo["voornaam"];
 } else
-    echo "gast winkelwagen" ?> </h1>
-</header>
+    echo "gast winkelwagen" ?>
 
 <div class="container">
     <section id="products">
