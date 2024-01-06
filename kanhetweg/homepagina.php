@@ -41,7 +41,7 @@
         <a class="nav-link" href="../html/home.html"> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../html/productpagina.php"> Producten </a>
+        <a class="nav-link" href="../productpagina.php"> Producten </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../html/contact.html"> Contact </a>

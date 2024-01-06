@@ -13,7 +13,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$gebruiker = 600;
+$gebruiker = 53;
 
 $order = "select I.order_id, I.product_id,P.id, I.quantity, P.name, P.price
 from product as P
@@ -38,26 +38,25 @@ Where order_id = $gebruiker";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Winkelwagen</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/shoppingcartpage.css">
+    <link rel="stylesheet" href="css/shoppingcartpage.css">
 </head>
 <body>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="home.html"><img src="../Goedeimages/LogoNG.png" alt="Logo" height="70" width="90"></a>
+    <a class="navbar-brand" href="html/home.html"><img src="Goedeimages/LogoNG.png" alt="Logo" height="70" width="90"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home.html"> Home </a>
+                <a class="nav-link" href="html/home.html"> Home </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html"> Contact </a>
+                <a class="nav-link" href="html/contact.html"> Contact </a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="wagentje.php"> Winkelwagen</a>
@@ -66,17 +65,14 @@ Where order_id = $gebruiker";
     </div>
 </nav>
 
-<body>
-<header>
-    <h1><?php
+<?php
         $printnaam = $conn->query($naam);
 
 if ($printnaam->num_rows > 0){
 $hallo = $printnaam->fetch_assoc();
     echo "winkelwagen van " . $hallo["voornaam"];
 } else
-    echo "gast winkelwagen" ?> </h1>
-</header>
+    echo "gast winkelwagen" ?>
 
 <div class="container">
     <section id="products">
@@ -126,7 +122,7 @@ if ($result->num_rows > 0) {
     </div>
 
     <!-- betaalpagina link -->
-    <a href="betalen.html" class="btn btn-primary float-right">Bestellen!</a>
+    <a href="html/betalen.html" class="btn btn-primary float-right">Bestellen!</a>
 
 </div>
 </body>

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>The Nerdy Gadgets</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="css/products.css">
 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
+    <a class="navbar-brand" href="html/home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,13 +20,13 @@
                 <a class="nav-link" href="home.html"> Home </a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="../kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html"> Contact </a>
+                <a class="nav-link" href="html/contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="wagentje.php"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
 
     <div>
         <div class="card" >
-            <img src="../img/rozegift.webp" alt="Easter Egg Image" id="easterEggImage">
+            <img src="img/rozegift.webp" alt="Easter Egg Image" id="easterEggImage">
     <style>
         #easterEggMessage {
             display: none;

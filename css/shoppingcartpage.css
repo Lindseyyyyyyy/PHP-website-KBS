@@ -6,9 +6,10 @@
     }
 
 body {
-    background-image: url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif');
+    background-color: rgba(41, 0, 77);
     background-size: cover;
 }
+/*image: url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif')*/
 .footer {
     background-color: #230536;
     color: #fff;
