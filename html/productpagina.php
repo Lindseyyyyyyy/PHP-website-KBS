@@ -61,7 +61,7 @@ ORDER BY SUM(quantity) DESC";
                 <a class="nav-link" href="contact.html"> Contact </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+                <a class="nav-link" href="../kanhetweg/shoppingcart.html"> Winkelwagen</a>
             </li>
         </ul>
     </div>
@@ -149,7 +149,7 @@ if ($result->num_rows > 0) {
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"]. '-</strong> </span>
-                  <a href="shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <a href="../kanhetweg/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 

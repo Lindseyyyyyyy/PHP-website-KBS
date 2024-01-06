@@ -1,2 +1,3 @@
 <?php
-function
+function toevoegen($order,$product,$aantal){
+}
