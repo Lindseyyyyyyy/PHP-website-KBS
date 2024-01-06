@@ -71,6 +71,7 @@ if ($result->num_rows > 0) {
                 <form method='post' action='pdetail.php'>
         <input type='number' name='quantity' id='quantity' min='1' value='1'> aantal
         <input type='submit' value='toevoegen aan winkelwagen'> 
+        
         </form> </div></div>";
 }
 $soort = $row["category"];

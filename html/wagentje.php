@@ -20,7 +20,7 @@ from product as P
 join order_item as I on I.product_id = P.id
 join orders as O on I.order_id = O.id
 join user as U on O.user_id = U.id
-Where order_id = 53";
+Where order_id = $gebruiker";
 
 $naam = "select U.first_name as 'voornaam'
 from order_item as I 
