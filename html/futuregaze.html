@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>FutureGaze</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/futuregaze.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.7);">
+  <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="home.html"> Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../kanhetweg/producten.html"> Producten <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html"> Contact </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="shoppingcart.html"> Winkelwagen</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="product-container">
+  <img src="Goedeimages/vr.png" alt="vr" class="product-image">
+  <div class="product-details">
+    <h2 class="product-name">FutureGaze, de revolutionaire VR-bril</h2>
+    <p class="product-price">€599,00</p>
+    <p class="product-description">
+
+      FutureGaze opent de deur naar ongekende hoogten van hyperrealistische virtuele werelden en meeslepende ervaringen. Ontsnap aan de alledaagse sleur en dompel jezelf onder in opwindende avonturen, waardoor je de kans krijgt om in de toekomst te stappen en je dromen werkelijkheid te laten worden.
+      De geavanceerde VR-bril van FutureGaze biedt een mooie reis door adembenemende virtuele werelden, van diepe oceaanzwemmingen tot het verkennen van de ruimte en deelname aan epische virtuele gevechten. Het hoogwaardige ontwerp en de geavanceerde technologie tillen de VR-ervaring naar nieuwe hoogten en zetten je zintuigen op scherp.
+
+      FutureGaze is niet alleen een technologisch hoogstandje, maar ook een modeaccessoire met aandacht voor detail en comfort. Het lichtgewicht en ergonomisch ontwerp zorgt voor urenlang comfort, terwijl de verstelbare band en premium materialen duurzaamheid en stijl combineren.
+
+      Personaliseer de FutureGaze VR-bril naar jouw wensen! Kies voor een strak zwart frame met opvallende rode accenten om een vleugje sportieve elegantie toe te voegen aan je ultieme VR-ervaring. Geniet van de perfecte combinatie van verfijning en gedurfdheid elke keer dat je de FutureGaze opzet.
+
+    </p>
+    <label for="quantity">Aantal:</label>
+    <select id="quantity" class="quantity-select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button class="add-to-cart" onclick="addToCart()">Voeg toe aan winkelwagen</button>
+    <button class="remove-from-cart" onclick="removeFromCart()">Verwijder uit winkelwagen</button>
+  </div>
+</div>
+
+<div class="cart">
+  <a class="view-cart" href="winkelwagen.html">
+    <span class="cart-icon">&#128722;</span>
+    Winkelwagen: <span class="cart-count" id="cartCount">0</span>
+  </a>
+</div>
+
+
+<script>
+  // Haal de bestaande winkelwagen op uit localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let cartCount = 0;
+
+  function addToCart() {
+    const quantity = document.getElementById("quantity").value;
+
+    // Voeg het geselecteerde product toe aan de winkelwagen
+    cart.push({
+      name: "Legion Laptop",
+      price: 1050,
+      quantity: parseInt(quantity)
+    });
+
+    // Sla de bijgewerkte winkelwagen op in localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Werk het winkelwagen-icoon bij
+    updateCartCount();
+  }
+
+  function removeFromCart() {
+    // Verwijder het product uit de winkelwagen
+    cart = [];
+
+    // Sla de bijgewerkte winkelwagen op in localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Werk het winkelwagen-icoon bij
+    updateCartCount();
+  }
+
+  function updateCartCount() {
+    // Bereken het totaal aantal producten in de winkelwagen
+    cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+    // Update de weergave van het totaal aantal producten in de winkelwagen
+    document.getElementById("cartCount").innerText = cartCount;
+  }
+
+  // Laad het aantal producten in de winkelwagen bij het laden van de pagina
+  updateCartCount();
+</script>
+</body>
+</html>

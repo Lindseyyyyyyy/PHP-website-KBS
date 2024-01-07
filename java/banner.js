@@ -1,21 +1,33 @@
+//Houdt bij welke dia wordt weergegeven
 let slideIndex = 1;
 
-function nextSlide() {
-    const slides = document.querySelectorAll('.slider-nav li');
-    const currentSlide = document.querySelector('.slider-nav .active');
-    const nextSlide = currentSlide.nextElementSibling;
+//
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slider img');
+    const navItems = document.querySelectorAll('.slider-nav a');
 
-    if (nextSlide) {
-        currentSlide.classList.remove('active');
-        nextSlide.classList.add('active');
+
+    slides.forEach(slide => slide.style.display = 'none');
+    navItems.forEach(item => item.classList.remove('active'));
+
+
+    slides[index - 1].style.display = 'block';
+    navItems[index - 1].classList.add('active');
+}
+
+function nextSlide() {
+    slideIndex++;
+    if (slideIndex > document.querySelectorAll('.slider img').length) {
+        slideIndex = 1;
     }
+    showSlide(slideIndex);
 }
 
 function init() {
-    const firstSlide = document.querySelector('.slider-nav li:first-child');
-    firstSlide.classList.add('active');
 
+    showSlide(slideIndex);
     setInterval(nextSlide, 3000);
 }
 
 document.addEventListener('DOMContentLoaded', init);
+

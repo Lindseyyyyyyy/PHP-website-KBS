@@ -28,7 +28,6 @@ JOIN product as P on P.id = O.product_id
 GROUP BY product_id
 ORDER BY SUM(quantity) DESC";
 
-
 ?>
 
 <html>

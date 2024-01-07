@@ -8,3 +8,20 @@
     transform: translateY(0);
     transition: transform 0.5s ease-out;
 }
+
+.falling-icon {
+    position: absolute;
+    animation: fallAnimation 6s linear infinite;
+}
+
+@keyframes fallAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
+
