@@ -44,14 +44,14 @@ ORDER BY SUM(quantity) DESC";
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
+    <a class="navbar-brand" href="html/home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home.html"> Home </a>
+                <a class="nav-link" href="html/home.html"> Home </a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
@@ -136,7 +136,7 @@ if ($result->num_rows > 0) {
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"]. '-</strong> </span>
-                  <a href="kanhetweg/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 
