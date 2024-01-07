@@ -1,10 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "Lovinadolfijn123!@";
-$dbname = "nerdy_gadgets";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+include_once 'db_connection.php';
+global $conn;
 
 // Controleer de verbinding
 if ($conn->connect_error) {
@@ -15,8 +11,8 @@ if ($conn->connect_error) {
 
 
 $query = "SELECT product.id, product.name, product.image, COUNT(order_item.product_id) AS aantal_bestellingen
-          FROM `order`
-          JOIN order_item ON `order`.id = order_item.order_id
+          FROM `orders`
+          JOIN order_item ON `orders`.id = order_item.order_id
           JOIN product ON order_item.product_id = product.id
           GROUP BY product.id
           ORDER BY aantal_bestellingen DESC
