@@ -35,20 +35,16 @@
 <?php
 
 
-$servername = "localhost"; // Replace with your server name
-$username = "root"; // Replace with your username
-$password = ""; // Replace with your password
-$dbname = "nerdy_gadgets"; // Replace with your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+include_once 'databaseconnectie.php';
+global $conn;
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 include 'functions.php';
+include_once 'variables.php';
+
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

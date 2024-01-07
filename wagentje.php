@@ -1,19 +1,16 @@
 <?php
 
-
-$servername = "localhost"; // Replace with your server name
-$username = "root"; // Replace with your username
-$password = ""; // Replace with your password
-$dbname = "nerdy_gadgets"; // Replace with your database name
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+include_once 'databaseconnectie.php';
+global $conn;
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$gebruiker = 53;
+
+include_once 'variables.php';
+global $orderid;
+
+$gebruiker = $orderid;
 
 $order = "select I.order_id, I.product_id,P.id, I.quantity, P.name, P.price
 from product as P
@@ -98,7 +95,9 @@ if ($result->num_rows > 0) {
         <input type="submit" value="toepassen">
         </form>
         <?php $korting = FALSE;
-        if(isset($_GET["coupon"]) == "EASTEREGG17"){
+        $code = "EASTEREGG17";
+        $input = isset($_GET['id']) ? $_GET['id'] : '';
+        if ($input === $code){
             $korting = TRUE;
         }
         ?>
@@ -109,7 +108,7 @@ if ($result->num_rows > 0) {
     <div id="total-section">
         <p>Subtotaal: <?php echo $p. " euro"; ?></p>
         <p>Korting: <?php $egg = 0;
-            if($korting == TRUE){
+            if($korting){
             $egg = $p * 0.1;}
             echo $egg. " euro";
           ?></p>

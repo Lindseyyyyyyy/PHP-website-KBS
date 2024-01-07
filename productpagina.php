@@ -137,7 +137,7 @@ if ($result->num_rows > 0) {
                   <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'"> klik hier om naar de productpagina te gaan </a>
                   <p class="card-text">'. substr($row["description"],0,50)."...".'</p>
                   <span class="product-price"> <strong>'."€". $row["price"]. '-</strong> </span>
-                  <a href="kanhetweg/shoppingcart.html" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
+                  <a href="http://localhost/KBSnerdygadgets/pdetail.php?id='.$row["id"].'" class="btn btn-primary float-right"> Toevoegen aan winkelwagen </a>
                 </div>
               </div>
             </div> 
