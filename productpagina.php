@@ -45,14 +45,14 @@ ORDER BY SUM(quantity) DESC";
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="home.html">Nerdy Gadgets</a>
+    <a class="navbar-brand" href="html/home.html">Nerdy Gadgets</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home.html"> Home </a>
+                <a class="nav-link" href="html/home.html"> Home </a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="productpagina.php"> Producten <span class="sr-only">(current)</span></a>
