@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #8e44ad; /* Paarse achtergrond */
-    color: #f9ca24; /* Gele tekst */
+    background-color: #8e44ad;
+    color: #f9ca24;
 }
 
 header {
-    background-color: #8e44ad; /* Paarse achtergrond */
-    color: #f9ca24; /* Gele tekst */
+    background-color: #8e44ad;
+    color: #f9ca24;
     text-align: center;
     padding: 1em;
 }
@@ -16,7 +16,7 @@ header {
 .product-container {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #8e44ad; /* Paarse achtergrond */
+    background-color: #8e44ad;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -37,23 +37,23 @@ header {
 .product-name {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #f9ca24; /* Gele tekst */
+    color: #f9ca24;
 }
 
 .product-price {
     font-size: 1.5em;
-    color: #f9ca24; /* Gele tekst */
+    color: #f9ca24;
 }
 
 .product-description {
     margin-top: 20px;
     line-height: 1.6;
     text-align: left;
-    color: #f9ca24; /* Gele tekst */
+    color: #f9ca24;
 }
 
 .add-to-cart {
-    background-color: #f9ca24; /* Gele achtergrond */
+    background-color: #f9ca24;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -63,7 +63,7 @@ header {
 }
 
 .view-cart {
-    background-color: #f9ca24; /* Gele achtergrond */
+    background-color: #f9ca24;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -78,7 +78,7 @@ header {
 .cart {
     text-align: right;
     margin-top: 10px;
-    color: #f9ca24; /* Gele tekst */
+    color: #f9ca24;
 }
 
 .cart-icon {
@@ -87,7 +87,7 @@ header {
 }
 
 .cart-count {
-    background-color: #f9ca24; /* Gele achtergrond */
+    background-color: #f9ca24;
     color: #fff;
     padding: 5px 10px;
     border-radius: 50%;
@@ -101,7 +101,7 @@ header {
 }
 
 .remove-from-cart {
-    background-color: #e74c3c; /* Rode achtergrond */
+    background-color: #e74c3c;
     color: #fff;
     padding: 10px 20px;
     border: none;

@@ -28,14 +28,14 @@ header {
     color: #fff;
     text-align: center;
     padding: 1em;
-    position: relative; /* Stel de positie in op relatief */
-    margin-top: 20px;   /* Voeg een bovenmarge toe om ruimte te creëren onder de navigatiebalk */
+    position: relative;
+    margin-top: 20px;
 }
 
 .container {
-    max-width: 1600px; /* Kies je gewenste maximale breedte */
-    margin: 0 auto; /* Centreer de container op de pagina */
-    padding: 20px; /* Voeg eventuele padding toe naar wens */
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
     color: #cccccc;
 }
 
