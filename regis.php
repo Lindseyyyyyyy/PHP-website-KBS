@@ -121,7 +121,7 @@ if ($conn->connect_error) {
           </div>
 
           <div class="container signin">
-              <p>Heb je al een account? <a href="inloggen.php">Log hier in!</a>.</p>
+              <p>Heb je al een account? <a href="html/inlogversie.html">Log hier in!</a>.</p>
           </div>
       </form>
 </div>
