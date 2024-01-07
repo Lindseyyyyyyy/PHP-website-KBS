@@ -112,7 +112,7 @@ $result = $conn->query($query);
                   <h5 class="card-title">'.$row["id"].'</h5>
                   <p class="card-text">'. $row["name"].'</p>
                   <span class="product-price"> <strong>'. $row["price"]. '-</strong> </span>
-                  <a href="../kanhetweg/shoppingcart.html" class="btn btn-primary float-right">Buy Now</a>
+                  <a href="/shoppingcart.html" class="btn btn-primary float-right">Buy Now</a>
                 </div>
               </div>
             </div> 
