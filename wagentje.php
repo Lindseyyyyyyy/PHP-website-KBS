@@ -92,12 +92,12 @@ if ($result->num_rows > 0) {
         <form method="get" action="wagentje.php">
         <label for="coupon-input">Couponcode:</label>
         <input type="text" id="coupon-input" name="coupon" placeholder="Voer je couponcode in">
-        <input type="submit" value="toepassen">
+        <input type="submit" value="toepassen"> <br> *er kan maximaal 1 coupon worden gebruikt per bestelling
         </form>
         <?php $korting = FALSE;
         $code = "EASTEREGG17";
-        $input = isset($_GET['id']) ? $_GET['id'] : '';
-        if ($input === $code){
+        $input = isset($_GET['coupon']) ? $_GET['coupon'] : '';
+        if ($input == $code){
             $korting = TRUE;
         }
         ?>
